@@ -1,0 +1,68 @@
+// Font Families
+$font-family-lora: 'Lora', serif;
+$font-family-karla: 'Karla', sans-serif;
+$font-family-amatic: 'Amatic SC', cursive;
+
+// Headings
+h1 {
+  font-family: $font-family-lora;
+  font-weight: bold;
+  font-size: $font-size-0;
+  line-height: $line-height-0;
+  letter-spacing: $letter-spacing-0;
+  text-transform: $text-case-none;
+}
+
+h2 {
+  font-family: $font-family-lora;
+  font-weight: bold;
+  font-size: $font-size-1;
+  line-height: $line-height-1;
+  letter-spacing: $letter-spacing-0;
+  text-transform: $text-case-none;
+}
+
+h3 {
+  font-family: $font-family-lora;
+  font-weight: medium;
+  font-size: $font-size-2;
+  line-height: $line-height-2;
+  letter-spacing: $letter-spacing-0;
+  text-transform: $text-case-none;
+}
+
+h4 {
+  font-family: $font-family-lora;
+  font-weight: regular;
+  font-size: $font-size-3;
+  line-height: $line-height-3;
+  letter-spacing: $letter-spacing-0;
+  text-transform: $text-case-none;
+}
+
+// Body
+body {
+  font-family: $font-family-karla;
+  font-weight: regular;
+  font-size: $font-size-4;
+  line-height: $line-height-4;
+  letter-spacing: $letter-spacing-0;
+}
+
+// Small Text
+.caption {
+  font-family: $font-family-karla;
+  font-weight: regular;
+  font-size: $font-size-5;
+  line-height: $line-height-5;
+  letter-spacing: $letter-spacing-0;
+}
+
+// Quote
+.quote {
+  font-family: $font-family-amatic;
+  font-weight: bold;
+  font-size: $font-size-7;
+  line-height: $line-height-7;
+  letter-spacing: $letter-spacing-0;
+}

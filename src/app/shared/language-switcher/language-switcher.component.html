@@ -1,0 +1,6 @@
+<div class="language-list">
+  <div *ngFor="let lang of languages" class="language-item">
+    <img [src]="lang.flag" [alt]="lang.name" />
+    <span>{{ lang.name }}</span>
+  </div>
+</div>
