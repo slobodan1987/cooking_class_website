@@ -177,6 +177,17 @@ body {
 
 }
 
+.email-label {
+  min-width: 4em;
+}
+
+.email-row {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap; // ako je email predugačak na malim ekranima
+}
+
 .company-mail {
   word-break: break-all;
+  font-size: medium;
 }
