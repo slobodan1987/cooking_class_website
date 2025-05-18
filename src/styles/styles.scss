@@ -191,3 +191,12 @@ body {
   word-break: break-all;
   font-size: medium;
 }
+
+.input-field:focus {
+  outline: none; // Remove default browser outline
+  border: 2px solid black !important; // Consistent black border
+}
+
+.div-title {
+  margin-top: 18px;
+}
