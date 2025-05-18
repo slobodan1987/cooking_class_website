@@ -1,6 +1,12 @@
-<div class="language-list">
-  <div *ngFor="let lang of languages" class="language-item">
-    <img [src]="lang.flag" [alt]="lang.name" />
-    <span>{{ lang.name }}</span>
+<div [formGroup]="form" class="language-switcher-row">
+<select class="input-field" formControlName="language" class="language-selection-dropdown">
+  <div class="language-list">
+    <option *ngFor="let lang of languages" [value]="lang.code">
+      <div class="language-item">
+        <span>{{ lang.name }}</span>
+      </div>
+    </option>
   </div>
+</select>
+<img [src]="form.controls['language'].value | flag" />
 </div>

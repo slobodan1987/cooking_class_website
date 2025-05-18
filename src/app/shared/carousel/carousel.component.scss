@@ -1,0 +1,57 @@
+.carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-strip {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* omogućava horizontalni scroll na točkić */
+    overscroll-behavior-x: contain;
+}
+
+.carousel-strip img {
+    height: 200px;
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0;
+    border-radius: 5px;
+    box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.38);
+}
+
+@media (max-width: 768px) {
+    .carousel-strip img {
+        height: 120px;
+    }
+}
+
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+
+    &.left {
+        left: 10px;
+    }
+
+    &.right {
+        right: 10px;
+    }
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.6);
+    }
+}

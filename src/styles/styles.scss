@@ -4,12 +4,179 @@
 @use "base/base";
 @use "components/buttons";
 
-.main-layout {
+.main-wrapper {
   display: flex;
-  align-items: flex-start;
-  gap: 40px;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+  padding: 12px;
+}
+
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.content {
+  max-width: 1200px;
+  width: 100%;
+  background-image: url('../assets/img/plitvice-panorama.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 24px;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.carousel-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.input-field,
+.submit-button {
+  box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.38);
+}
+
+.upper-part {
+  max-width: 1200px;
+  width: 100%;
 }
 
 .main-content {
-  flex: 1 1 0;
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  max-width: 1200px;
+  width: 100%;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.left-column {
+  flex: 2;
+  min-width: 0;
+}
+
+.right-column {
+  flex: 1;
+  min-width: 320px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.booking-form {
+  padding: 10px;
+  background-color: colors.$neutral-creamy-white-600;
+  border-radius: 5px;
+  box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.38);
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.input-field {
+  height: 35px;
+  border-radius: 5px;
+}
+
+.submit-button {
+  width: 100%;
+  height: 35px;
+  background-color: colors.$secondary-olive-green-700;
+  border-radius: 5px;
+}
+
+.invalid-button {
+  background-color: grey;
+}
+
+.input-label {
+  height: 35;
+}
+
+.form-button-divider {
+  height: 35px;
+}
+
+.input-error {
+  border: 2px solid red;
+}
+
+.carousel-container {
+  margin-bottom: 20px;
+  max-width: 1200px;
+  width: 100%
+}
+
+.icon-outer-container {
+  display: flex;
+  align-items: center;
+}
+
+.info-label {
+  margin-right: 10px;
+}
+
+.language-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.language-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 18px;
+  font-weight: bold;
+  color: colors.$neutral-creamy-white-900;
+
+  img {
+    width: 32px;
+    height: auto;
+  }
+}
+
+.language-switcher-row {
+  display: flex;
+  direction: flex-row;
+}
+
+.language-selection-dropdown {
+  margin-right: 10px;
+  border-radius: 5px;
+
+  box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.38);
+
+}
+
+.company-mail {
+  word-break: break-all;
 }
