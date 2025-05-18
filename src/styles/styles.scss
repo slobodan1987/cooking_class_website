@@ -1,5 +1,15 @@
-@import "abstracts/colors";
-@import "abstracts/typography";
-@import "abstracts/variables";
-@import "base/base";
-@import "components/buttons";
+@use "abstracts/variables";
+@use "abstracts/colors";
+@use "abstracts/typography";
+@use "base/base";
+@use "components/buttons";
+
+.main-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.main-content {
+  flex: 1 1 0;
+}
