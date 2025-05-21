@@ -142,7 +142,7 @@
                     class="ph ph-calendar-blank icon"></i>Datum
                   *</label>
                 <input
-                  [ngClass]="form.controls['bookingForm'].controls['date'].invalid ? 'input-error input-field date-input-field' : 'input-field date-input-field'"
+                  [ngClass]="form.controls['bookingForm'].controls['date'].invalid ? 'input-error input-field' : 'input-field'"
                   formControlName="date" [min]="todayDateStr" [max]="maxDateInFutureStr" class="input-field" id="date"
                   name="date" type="date" />
               </div>
