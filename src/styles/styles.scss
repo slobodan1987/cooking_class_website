@@ -23,7 +23,7 @@ body {
 .content {
   max-width: 1200px;
   width: 100%;
-  background-image: url('../assets/img/plitvice-panorama.png');
+  background-image: url('/cooking_class_website/assets/img/plitvice-panorama.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -199,4 +199,9 @@ body {
 
 .div-title {
   margin-top: 18px;
+}
+
+.date-input-field {
+  width: 100%;
+  box-sizing: border-box;
 }
