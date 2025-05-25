@@ -1,5 +1,7 @@
 {
   "name": "cooking-class-website",
+  "description": "Fullstack Cooking Class Website",
+  "author": "Slobodan Opsenica",
   "version": "1.0.0",
   "private": true,
   "scripts": {

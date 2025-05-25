@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   AbstractControl,
   FormControl,
@@ -39,15 +39,15 @@ interface Form {
   ],
   styleUrls: ['../styles/styles.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   beState: IBEState | null = null;
 
   todayDate: Date | null = null;
   todayDateStr: string | null = null;
   pricePerPerson: number | null = null;
 
-  start: number | null = null;
-  end: number | null = null;
+  startTime: string | null = null;
+  endTime: string | null = null;
 
   address: string | null = null;
   companyPhone: string | null = null;
@@ -62,7 +62,11 @@ export class AppComponent {
   maxDateInFuture: Date | null = null;
   maxDateInFutureStr: string | null = null;
 
-  form: FormGroup<Form> | null = null;
+  form: FormGroup<Form> = this.createForm();
+
+  ngOnInit(): void {
+    this.readBEState();
+  }
 
   stripTime(date: Date | null): Date | null {
     if (!date) return null;
@@ -131,8 +135,8 @@ export class AppComponent {
     this.todayDateStr = this.todayDate.toISOString().split('T')[0];
     this.pricePerPerson = this.beState?.companyData?.pricePerPerson ?? null;
 
-    this.start = this.beState?.companyData?.startTimeHours ?? null;
-    this.end = this.beState?.companyData?.endTimeHours ?? null;
+    this.startTime = this.beState?.companyData?.startTime ?? null;
+    this.endTime = this.beState?.companyData?.endTime ?? null;
 
     this.address = this.beState?.companyData?.address ?? null;
     this.companyPhone = this.beState?.companyData?.phone ?? null;

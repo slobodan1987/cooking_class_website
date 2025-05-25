@@ -1,8 +1,9 @@
+import sqlite3Pkg from "sqlite3";
 import express from "express";
 import cors from "cors";
 import { open } from "sqlite";
-import sqlite3 from "sqlite3";
 
+const sqlite3 = sqlite3Pkg.default || sqlite3Pkg;
 const app = express();
 app.use(cors());
 app.use(express.json());

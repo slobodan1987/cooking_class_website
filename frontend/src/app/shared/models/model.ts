@@ -90,21 +90,13 @@ export interface ICompanyData {
    */
   email: string;
   /**
-   * start time of the booking in hours (0-23)
+   * start time of the booking
    */
-  startTimeHours: number;
+  startTime: string;
   /**
-   * end time of the booking in hours (0-23)
+   * end time of the booking
    */
-  endTimeHours: number;
-  /**
-   * start time of the booking in minutes (0-59)
-   */
-  startTimeMinutes: number;
-  /**
-   * end time of the booking in minutes (0-59)
-   */
-  endTimeMinutes: number;
+  endTime: string;
   /**
    * minimum number of persons per class
    */

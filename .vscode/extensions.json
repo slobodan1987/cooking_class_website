@@ -1,4 +1,28 @@
 {
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846
-  "recommendations": ["angular.ng-template"]
+  "recommendations": [
+    // Angular frontend
+    "angular.ng-template", // Angular Language Service
+    "johnpapa.angular2", // Angular Snippets
+    "natewallace.angular2-inline", // Angular inline templates/styles (opciono)
+    "esbenp.prettier-vscode", // Prettier
+    "dbaeumer.vscode-eslint", // ESLint
+    "ecmel.vscode-html-css", // HTML CSS class support
+    "mrmlnc.vscode-scss", // SCSS IntelliSense
+    "ritwickdey.live-server", // Live Server
+    "alexcvzz.vscode-sqlite", // SQLite Viewer
+    "mtxr.sqltools", // SQLTools
+    "mtxr.sqltools-driver-sqlite", // SQLTools SQLite Driver
+    "joshbolduc.rxsjs-snippets", // RxJS Snippets
+    "formulahendry.auto-close-tag", // Automatsko zatvaranje tagova
+    "christian-kohler.path-intellisense", // Path auto-complete
+    "usernamehw.errorlens", // Error Lens
+    "nrwl.angular-console", // Angular Schematics GUI (opciono)
+    "eamodio.gitlens", // GitLens
+
+    // Node.js backend
+    "waderyan.nodejs-extension-pack",
+    "christian-kohler.npm-intellisense",
+    "mikestead.dotenv",
+    "humao.rest-client"
+  ]
 }

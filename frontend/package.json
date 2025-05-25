@@ -1,5 +1,7 @@
 {
-  "name": "cooking-class-website",
+  "name": "cooking-class-website-frontend",
+  "description": "Frontend for the Cooking Class Website",
+  "author": "Slobodan Opsenica",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

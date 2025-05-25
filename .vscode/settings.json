@@ -1,0 +1,12 @@
+{
+  "sqltools.useNodeRuntime": true,
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "name": "konekcija",
+      "group": "grupa_konekcija",
+      "database": "${workspaceFolder:cooking_class_website}/backend/database.db"
+    }
+  ]
+}

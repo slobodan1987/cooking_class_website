@@ -1,190 +1,249 @@
 <!-- main div -->
 <div class="main-wrapper">
-
   <div class="content">
+    <!-- background-image -->
+    <div class="bg-image"></div>
 
-    <!-- upper part (title, description, carouse) -->
-    <div class="upper-part">
+    <!-- inner content -->
+    <div class="content-inner">
+      <!-- upper part (title, description, carouse) -->
+      <div class="upper-part">
+        <!-- language-switcher -->
+        <app-language-switcher></app-language-switcher>
 
-      <!-- language-switcher -->
-      <app-language-switcher></app-language-switcher>
-
-      <!-- title -->
-      <div class="div-title">
-        <h1>
-          Traditional Plitvice Lakes Cooking Class
-        </h1>
-      </div>
-
-      <!-- description -->
-      <div class="description">
-
-        <div>
-          <p>
-            Dobrodošli u srce Like, gdje mirisi domaće kuhinje bude sjećanja, a okusi pričaju priče naših baka. Naš
-            Traditional Plitvice Lakes Cooking Class nije samo tečaj kuhanja – to je doživljaj za dušu.
-          </p>
-          <p>
-            U društvu naše obitelji, u toplini ličkog doma, naučit ćete pripremati autentična plitvička i lička jela po
-            starinskim receptima koji se prenose generacijama. Ali ne brinite – ovdje se ne broje samo grami i minute.
-            Ovdje
-            se
-            broje osmijesi, mirisi svježeg bilja, zvuk pucanja vatre i topli razgovori uz rakijicu.
-          </p>
-          <p>
-            Zajedno ćemo mijesiti, sjeckati, kuhati i – najvažnije – smijati se. U svako jelo unosimo dašak prošlih
-            vremena
-            i
-            ljubavi prema kraju iz kojeg dolazimo. A dok kuhate s nama, postajete dio te priče.
-          </p>
-        </div>
-      </div>
-
-      <!-- carousel -->
-      <div class="carousel-container">
-        <app-carousel></app-carousel>
-      </div>
-
-    </div>
-
-    <!-- lower part -->
-    <div class="main-content">
-      <!-- left lower part (bullets, ...) -->
-      <div class="left-column">
-        <!-- bullets (description) -->
-        <div>
-
-          <div>
-            <h2>
-              Što vas očekuje?
-            </h2>
-          </div>
-
-          <div>
-            <p class="icon-outer-container"><i class="ph ph-cooking-pot icon"></i>Edukacija i priprema tradicionalnih
-              jela
-              uz stručne i srdačne
-              domaćine
-            </p>
-            <p class="icon-outer-container"><i class="ph ph-leaf icon"></i>Korištenje lokalnih, svježih
-              sastojaka – iz vrta, s tržnice ili
-              iz
-              prirode</p>
-            <p class="icon-outer-container"><i class="ph ph-house icon"></i>Nezaboravno druženje u rustikalnom
-              ambijentu</p>
-            <p class="icon-outer-container"><i class="ph ph-wine icon"></i>Kušanje vlastitih kulinarskih
-              remek-djela uz domaće vino i
-              rakiju
-            </p>
-            <p class="icon-outer-container"><i class="ph ph-heart icon"></i>Trenuci koje ćete ponijeti kući –
-              ne u torbi, nego u
-              srcu</p>
-          </div>
-        </div>
-
-        <!-- description ending -->
-        <div>
-
-          <div>
-            Ovo nije samo kuhanje – ovo je spajanje s kulturom, s ljudima i s prirodom Plitvičkih jezera. Ako tražite
-            nešto
-            istinski autentično, daleko od turističke vreve, dođite da zajedno zapalimo vatru, razvaljamo tijesto i
-            zapečemo
-            uspomene koje će trajati zauvijek.
-          </div>
-        </div>
-
-        <!-- final word -->
+        <!-- title -->
         <div class="div-title">
-          <h2>
-            Rezervirajte svoje mjesto za stolom – obitelj vas čeka!
-          </h2>
+          <h1>Traditional Plitvice Lakes Cooking Class</h1>
         </div>
 
+        <!-- description -->
+        <div class="description">
+          <div>
+            <p>
+              Dobrodošli u srce Like, gdje mirisi domaće kuhinje bude sjećanja,
+              a okusi pričaju priče naših baka. Naš Traditional Plitvice Lakes
+              Cooking Class nije samo tečaj kuhanja – to je doživljaj za dušu.
+            </p>
+            <p>
+              U društvu naše obitelji, u toplini ličkog doma, naučit ćete
+              pripremati autentična plitvička i lička jela po starinskim
+              receptima koji se prenose generacijama. Ali ne brinite – ovdje se
+              ne broje samo grami i minute. Ovdje se broje osmijesi, mirisi
+              svježeg bilja, zvuk pucanja vatre i topli razgovori uz rakijicu.
+            </p>
+            <p>
+              Zajedno ćemo mijesiti, sjeckati, kuhati i – najvažnije – smijati
+              se. U svako jelo unosimo dašak prošlih vremena i ljubavi prema
+              kraju iz kojeg dolazimo. A dok kuhate s nama, postajete dio te
+              priče.
+            </p>
+          </div>
+        </div>
+
+        <!-- carousel -->
+        <div class="carousel-container">
+          <app-carousel></app-carousel>
+        </div>
       </div>
 
-
-      <!-- booking form & info column (right lower part) -->
-      <div class="right-column">
-
-        <!-- booking form -->
-        <div class="booking-form">
-          <h2 class="icon-outer-container">
-
-            <i class="ph ph-calendar-check icon"></i>
-            Rezervirajte svoj termin
-
-          </h2>
-          <form [formGroup]="form">
-            <div formGroupName="bookingForm">
-              <div class="form-field">
-                <label class="input-label icon-outer-container" for="name"><i class="ph ph-user icon"></i>Ime *</label>
-                <input
-                  [ngClass]="form.controls['bookingForm'].controls['name'].invalid ? 'input-error input-field' : 'input-field'"
-                  formControlName="name" class="input-field" required id="name" name="name" type="text" />
-              </div>
-
-              <div class="form-field">
-                <label class="input-label icon-outer-container" for="email"><i class="ph ph-envelope icon"></i>
-                  E-mail</label>
-                <input formControlName="email" class="input-field" id="email" name="email" type="email" />
-              </div>
-
-              <div class="form-field">
-                <label class="input-label icon-outer-container" for="phone"><i class="ph ph-phone icon"></i>Broj
-                  telefona *</label>
-                <input
-                  [ngClass]="form.controls['bookingForm'].controls['phone'].invalid ? 'input-error input-field' : 'input-field'"
-                  formControlName="phone" class="input-field" id="phone" name="phone" type="tel" />
-              </div>
-
-              <div class="form-field">
-                <label class="input-label icon-outer-container" for="date"><i
-                    class="ph ph-calendar-blank icon"></i>Datum
-                  *</label>
-                <input
-                  [ngClass]="form.controls['bookingForm'].controls['date'].invalid ? 'input-error input-field date-input-field' : 'input-field date-input-field'"
-                  formControlName="date" [min]="todayDateStr" [max]="maxDateInFutureStr" class="input-field" id="date"
-                  name="date" type="date" />
-              </div>
-
-              <div class="form-field">
-                <label class="input-label icon-outer-container" for="guests"><i class="ph ph-users-three icon"></i>Broj
-                  osoba *</label>
-                <input
-                  [ngClass]="form.controls['bookingForm'].controls['guests'].invalid ? 'input-error input-field' : 'input-field'"
-                  formControlName="guests" required id="guests" name="guests" type="number" [value]="minPersonsPerClass"
-                  [min]="minPersonsPerClass" [max]="maxPersonsPerClass" />
-              </div>
+      <!-- lower part -->
+      <div class="main-content">
+        <!-- left lower part (bullets, ...) -->
+        <div class="left-column">
+          <!-- bullets (description) -->
+          <div>
+            <div>
+              <h2>Što vas očekuje?</h2>
             </div>
 
-            <div class="form-button-divider"></div>
+            <div>
+              <p class="bullet-container">
+                <i class="ph ph-cooking-pot icon"></i>Edukacija i priprema
+                tradicionalnih jela uz stručne i srdačne domaćine
+              </p>
+              <p class="bullet-container">
+                <i class="ph ph-leaf icon"></i>Korištenje lokalnih, svježih
+                sastojaka – iz vrta, s tržnice ili iz prirode
+              </p>
+              <p class="bullet-container">
+                <i class="ph ph-house icon"></i>Nezaboravno druženje u
+                rustikalnom ambijentu
+              </p>
+              <p class="bullet-container">
+                <i class="ph ph-wine icon"></i>Kušanje vlastitih kulinarskih
+                remek-djela uz domaće vino i rakiju
+              </p>
+              <p class="bullet-container">
+                <i class="ph ph-heart icon"></i>Trenuci koje ćete ponijeti kući
+                – ne u torbi, nego u srcu
+              </p>
+            </div>
+          </div>
 
-            <button [ngClass]="form.invalid ? 'invalid-button submit-button' : 'submit-button'"
-              [disabled]="form.invalid" color="accent" type="submit"><i class="ph ph-paper-plane-right icon"></i>
-              Pošalji</button>
-          </form>
+          <!-- description ending -->
+          <div>
+            <div>
+              Ovo nije samo kuhanje – ovo je spajanje s kulturom, s ljudima i s
+              prirodom Plitvičkih jezera. Ako tražite nešto istinski autentično,
+              daleko od turističke vreve, dođite da zajedno zapalimo vatru,
+              razvaljamo tijesto i zapečemo uspomene koje će trajati zauvijek.
+            </div>
+          </div>
+
+          <!-- final word -->
+          <div class="div-title">
+            <h2>Rezervirajte svoje mjesto za stolom – obitelj vas čeka!</h2>
+          </div>
         </div>
 
-        <!-- info -->
-        <div class="info-section">
-          <p class="icon-outer-container"><i class="ph ph-currency-eur icon"></i><strong class="info-label">Cijena
-              po
-              osobi:</strong>{{pricePerPerson}}</p>
-          <p class="icon-outer-container"><i class="ph ph-clock icon"></i><strong class="info-label"><span>Radno
-                vrijeme:</span></strong><span>Svaki dan&nbsp;</span>{{start}}h - {{end}}h</p>
-          <p class="icon-outer-container"><i class="ph ph-map-pin icon"></i><strong class="info-label">Adresa:</strong>
-            {{address}}</p>
-          <p class="icon-outer-container"><i class="ph ph-phone icon"></i><strong class="info-label">Telefon:</strong>
-            {{companyPhone}}</p>
-          <p class="icon-outer-container email-row">
-            <i class="ph ph-envelope icon"></i>
-            <strong class="info-label">E-mail:</strong>
-            <span class="company-mail">{{companyMail}}</span>
-          </p>
+        <!-- booking form & info column (right lower part) -->
+        <div class="right-column">
+          <!-- booking form -->
+          <div class="booking-form">
+            <h4 class="bullet-container">
+              <i class="ph ph-calendar-check icon"></i>
+              Rezervirajte svoj termin
+            </h4>
+            <form [formGroup]="form">
+              <div formGroupName="bookingForm">
+                <div class="form-field">
+                  <label class="input-label icon-outer-container" for="name"
+                    ><i class="ph ph-user icon"></i>Ime *</label
+                  >
+                  <input
+                    [ngClass]="
+                      form.controls['bookingForm'].controls['name'].invalid
+                        ? 'input-error input-field'
+                        : 'input-field'
+                    "
+                    formControlName="name"
+                    class="input-field"
+                    required
+                    id="name"
+                    name="name"
+                    type="text"
+                  />
+                </div>
 
+                <div class="form-field">
+                  <label class="input-label icon-outer-container" for="email"
+                    ><i class="ph ph-envelope icon"></i> E-mail</label
+                  >
+                  <input
+                    formControlName="email"
+                    class="input-field"
+                    id="email"
+                    name="email"
+                    type="email"
+                  />
+                </div>
+
+                <div class="form-field">
+                  <label class="input-label icon-outer-container" for="phone"
+                    ><i class="ph ph-phone icon"></i>Broj telefona *</label
+                  >
+                  <input
+                    [ngClass]="
+                      form.controls['bookingForm'].controls['phone'].invalid
+                        ? 'input-error input-field'
+                        : 'input-field'
+                    "
+                    formControlName="phone"
+                    class="input-field"
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                  />
+                </div>
+
+                <div class="form-field">
+                  <label class="input-label icon-outer-container" for="date"
+                    ><i class="ph ph-calendar-blank icon"></i>Datum *</label
+                  >
+                  <input
+                    [ngClass]="
+                      form.controls['bookingForm'].controls['date'].invalid
+                        ? 'input-error input-field date-input-field'
+                        : 'input-field date-input-field'
+                    "
+                    formControlName="date"
+                    [min]="todayDateStr"
+                    [max]="maxDateInFutureStr"
+                    class="input-field"
+                    id="date"
+                    name="date"
+                    type="date"
+                  />
+                </div>
+
+                <div class="form-field">
+                  <label class="input-label icon-outer-container" for="guests"
+                    ><i class="ph ph-users-three icon"></i>Broj osoba *</label
+                  >
+                  <input
+                    [ngClass]="
+                      form.controls['bookingForm'].controls['guests'].invalid
+                        ? 'input-error input-field'
+                        : 'input-field'
+                    "
+                    formControlName="guests"
+                    required
+                    id="guests"
+                    name="guests"
+                    type="number"
+                    [value]="minPersonsPerClass"
+                    [min]="minPersonsPerClass"
+                    [max]="maxPersonsPerClass"
+                  />
+                </div>
+              </div>
+
+              <div class="form-button-divider"></div>
+
+              <button
+                [ngClass]="
+                  form.invalid
+                    ? 'invalid-button submit-button'
+                    : 'submit-button'
+                "
+                [disabled]="form.invalid"
+                color="accent"
+                type="submit"
+              >
+                <i class="ph ph-paper-plane-right icon"></i> Pošalji
+              </button>
+            </form>
+          </div>
+
+          <!-- info -->
+          <div class="info-section">
+            <p class="icon-outer-container price-row">
+              <i class="ph ph-currency-eur icon"></i
+              ><strong class="info-label">Cijena po osobi:</strong
+              >{{ pricePerPerson }} EUR<i class="ph ph-info info-icon"></i>
+            </p>
+            <p class="icon-outer-container info-row">
+              <i class="ph ph-clock icon"></i
+              ><strong><span class="info-label">Radno vrijeme:</span></strong
+              ><span>Svaki dan&nbsp;</span>{{ startTime }} - {{ endTime }}
+            </p>
+            <p class="icon-outer-container info-row">
+              <i class="ph ph-map-pin icon"></i
+              ><strong class="info-label">Adresa:</strong>
+              {{ address }}
+            </p>
+            <p class="icon-outer-container info-row">
+              <i class="ph ph-phone icon"></i
+              ><strong class="info-label">Telefon:</strong>
+              {{ companyPhone }}
+            </p>
+            <p class="icon-outer-container info-row">
+              <i class="ph ph-envelope icon"></i>
+              <strong class="info-label">E-mail:</strong>
+              <span>{{ companyMail }}</span>
+            </p>
+          </div>
         </div>
-
       </div>
     </div>
   </div>

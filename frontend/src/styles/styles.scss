@@ -21,17 +21,27 @@ body {
 }
 
 .content {
-  max-width: 1200px;
+  position: relative;
   width: 100%;
-  background-image: url('/cooking_class_website/assets/img/plitvice-panorama.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  box-sizing: border-box;
+  max-width: 1200px;
   border-radius: 10px;
   overflow: hidden;
-  padding: 24px;
+}
 
+.bg-image {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  opacity: 0.8;
+  background: url('/cooking_class_website/assets/img/plitvice-panorama.jpg');
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+}
+
+.content-inner {
+  position: relative;
+  padding: 24px;
 }
 
 *,
@@ -93,6 +103,12 @@ body {
 
 .icon {
   margin-right: 10px;
+  align-self: center;
+}
+
+.info-icon {
+  margin-left: 10px;
+  align-self: center;
 }
 
 .form-field {
@@ -135,26 +151,36 @@ body {
   width: 100%
 }
 
+.bullet-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+  word-break: break-word;
+}
+
 .icon-outer-container {
   display: flex;
   align-items: center;
+  flex-wrap: wrap; // omogućava prelamanje samo kad mora
+  gap: 6px;
+  margin-bottom: 10px;
+  word-break: break-word;
 }
 
 .info-label {
-  margin-right: 10px;
+  font-weight: bold;
+  margin-right: 4px;
 }
 
 .language-list {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
 }
 
 .language-item {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  font-size: 18px;
   font-weight: bold;
   color: colors.$neutral-creamy-white-900;
 
@@ -189,7 +215,6 @@ body {
 
 .company-mail {
   word-break: break-all;
-  font-size: medium;
 }
 
 .input-field:focus {
@@ -204,4 +229,35 @@ body {
 .date-input-field {
   width: 100%;
   box-sizing: border-box;
+}
+
+.info-section {
+  padding: 12px 0;
+}
+
+.info-section p.icon-outer-container {
+  align-items: flex-start;
+  gap: 2px;
+  margin-bottom: 10px;
+  word-break: break-word;
+}
+
+.icon-outer-container {
+  gap: 4px;
+}
+
+.info-label {
+  margin-right: 5px;
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+
+.info-row {
+  font-size: medium;
+  word-break: break-all;
+}
+
+.price-row {
+  font-weight: bold;
+  font-size: large;
 }
