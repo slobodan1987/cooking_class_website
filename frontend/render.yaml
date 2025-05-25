@@ -3,7 +3,7 @@ services:
     name: cooking-class-website-frontend
     env: static
     buildCommand: npm install && npm run build
-    staticPublishPath: dist
+    staticPublishPath: dist/cooking-class-website
     routes:
       # Fallback: svi nepoznati zahtevi idu na index.html
       - source: "/*"
