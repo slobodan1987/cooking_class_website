@@ -2,39 +2,29 @@ services:
   - type: static
     name: cooking-class-website-frontend
     env: static
-    buildCommand: npm install && npm run build
-    staticPublishPath: dist/cooking-class-website
+    buildCommand: npm install && npm run build -- --configuration production
+    staticPublishPath: dist/cooking_class_website
+
     routes:
-      # Fallback: svi nepoznati zahtevi idu na index.html
       - source: "/*"
         destination: "/index.html"
         statusCode: 200
 
     headers:
-      # Keširanje za index.html da bude uvek svež
       - source: "/index.html"
         headers:
           - key: "Cache-Control"
             value: "no-cache"
 
-      # Keširanje za statičke assete (duže važi)
       - source: "/assets/(.*)"
         headers:
           - key: "Cache-Control"
             value: "public, max-age=31536000, immutable"
 
-      # Fontovi i ikone
-      - source: "/(.*).(woff2|woff|ttf|eot|otf|ico|svg)"
+      - source: "/(.*).(woff2|woff|ttf|eot|otf|ico|svg|png|jpg|jpeg|gif|webp)"
         headers:
           - key: "Cache-Control"
             value: "public, max-age=31536000, immutable"
 
-      # Slike
-      - source: "/(.*).(png|jpg|jpeg|gif|webp)"
-        headers:
-          - key: "Cache-Control"
-            value: "public, max-age=31536000, immutable"
-
-    # Optionalno: ako želiš custom 404 stranicu
     errorPages:
       notFound: "/index.html"
