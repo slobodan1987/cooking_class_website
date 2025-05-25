@@ -6,10 +6,30 @@
 /out-tsc
 /bazel-out
 
+# Compiled output (frontend)
+/frontend/dist
+/frontend/tmp
+/frontend/out-tsc
+/frontend/bazel-out
+# Compiled output (backend)
+/backend/dist
+/backend/tmp
+/backend/out-tsc
+/backend/bazel-out
+
 # Node
 /node_modules
 npm-debug.log
 yarn-error.log
+
+# Node (frontend)
+/frontend/node_modules
+/frontend/npm-debug.log
+/frontend/yarn-error.log
+# Node (backend)
+/backend/node_modules
+/backend/npm-debug.log
+/backend/yarn-error.log
 
 # IDEs and editors
 .idea/
@@ -36,6 +56,23 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
+
+# Miscellaneous (frontend)
+/frontend/.angular/cache
+/frontend/.sass-cache
+/frontend/connect.lock
+/frontend/coverage
+/frontend/libpeerconnection.log
+/frontend/testem.log
+/frontend/typings
+# Miscellaneous (backend)
+/backend/.angular/cache
+/backend/.sass-cache
+/backend/connect.lock
+/backend/coverage
+/backend/libpeerconnection.log
+/backend/testem.log
+/backend/typings
 
 # System files
 .DS_Store
