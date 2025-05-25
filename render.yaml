@@ -1,0 +1,30 @@
+services:
+  - type: static
+    name: cooking-class-website-frontend
+    env: static
+    buildCommand: npm install && npm run build -- --configuration production
+    staticPublishPath: dist/cooking_class_website
+
+    routes:
+      - source: "/*"
+        destination: "/index.html"
+        statusCode: 200
+
+    headers:
+      - source: "/index.html"
+        headers:
+          - key: "Cache-Control"
+            value: "no-cache"
+
+      - source: "/assets/(.*)"
+        headers:
+          - key: "Cache-Control"
+            value: "public, max-age=31536000, immutable"
+
+      - source: "/(.*).(woff2|woff|ttf|eot|otf|ico|svg|png|jpg|jpeg|gif|webp)"
+        headers:
+          - key: "Cache-Control"
+            value: "public, max-age=31536000, immutable"
+
+    errorPages:
+      notFound: "/index.html"
