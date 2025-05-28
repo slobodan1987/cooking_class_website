@@ -1,3 +1,9 @@
+.carousel-container {
+    margin-bottom: 20px;
+    max-width: 1200px;
+    width: 100%
+}
+
 .carousel-wrapper {
     width: 100%;
     overflow: hidden;
@@ -25,12 +31,6 @@
     box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.38);
 }
 
-@media (max-width: 768px) {
-    .carousel-strip img {
-        height: 120px;
-    }
-}
-
 .scroll-button {
     position: absolute;
     top: 50%;
@@ -54,4 +54,10 @@
     &:hover {
         background: rgba(0, 0, 0, 0.6);
     }
+}
+
+.carousel-container {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }

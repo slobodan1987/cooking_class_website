@@ -41,14 +41,12 @@
         </div>
 
         <!-- carousel -->
-        <div class="carousel-container">
-          <app-carousel></app-carousel>
-        </div>
+        <app-carousel></app-carousel>
       </div>
 
-      <!-- lower part -->
+      <!-- middle part -->
       <div class="main-content">
-        <!-- left lower part (bullets, ...) -->
+        <!-- left middle part (bullets, ...) -->
         <div class="left-column">
           <!-- bullets (description) -->
           <div>
@@ -96,154 +94,20 @@
           </div>
         </div>
 
-        <!-- booking form & info column (right lower part) -->
+        <!-- booking form & info column (right middle part) -->
         <div class="right-column">
           <!-- booking form -->
-          <div class="booking-form">
-            <h4 class="bullet-container">
-              <i class="ph ph-calendar-check icon"></i>
-              Rezervirajte svoj termin
-            </h4>
-            <form [formGroup]="form">
-              <div formGroupName="bookingForm">
-                <div class="form-field">
-                  <label class="input-label icon-outer-container" for="name"
-                    ><i class="ph ph-user icon"></i>Ime *</label
-                  >
-                  <input
-                    [ngClass]="
-                      form.controls['bookingForm'].controls['name'].invalid
-                        ? 'input-error input-field'
-                        : 'input-field'
-                    "
-                    formControlName="name"
-                    class="input-field"
-                    required
-                    id="name"
-                    name="name"
-                    type="text"
-                  />
-                </div>
-
-                <div class="form-field">
-                  <label class="input-label icon-outer-container" for="email"
-                    ><i class="ph ph-envelope icon"></i> E-mail</label
-                  >
-                  <input
-                    formControlName="email"
-                    class="input-field"
-                    id="email"
-                    name="email"
-                    type="email"
-                  />
-                </div>
-
-                <div class="form-field">
-                  <label class="input-label icon-outer-container" for="phone"
-                    ><i class="ph ph-phone icon"></i>Broj telefona *</label
-                  >
-                  <input
-                    [ngClass]="
-                      form.controls['bookingForm'].controls['phone'].invalid
-                        ? 'input-error input-field'
-                        : 'input-field'
-                    "
-                    formControlName="phone"
-                    class="input-field"
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                  />
-                </div>
-
-                <div class="form-field">
-                  <label class="input-label icon-outer-container" for="date"
-                    ><i class="ph ph-calendar-blank icon"></i>Datum *</label
-                  >
-                  <input
-                    [ngClass]="
-                      form.controls['bookingForm'].controls['date'].invalid
-                        ? 'input-error input-field date-input-field'
-                        : 'input-field date-input-field'
-                    "
-                    formControlName="date"
-                    [min]="todayDateStr"
-                    [max]="maxDateInFutureStr"
-                    class="input-field"
-                    id="date"
-                    name="date"
-                    type="date"
-                  />
-                </div>
-
-                <div class="form-field">
-                  <label class="input-label icon-outer-container" for="guests"
-                    ><i class="ph ph-users-three icon"></i>Broj osoba *</label
-                  >
-                  <input
-                    [ngClass]="
-                      form.controls['bookingForm'].controls['guests'].invalid
-                        ? 'input-error input-field'
-                        : 'input-field'
-                    "
-                    formControlName="guests"
-                    required
-                    id="guests"
-                    name="guests"
-                    type="number"
-                    [value]="minPersonsPerClass"
-                    [min]="minPersonsPerClass"
-                    [max]="maxPersonsPerClass"
-                  />
-                </div>
-              </div>
-
-              <div class="form-button-divider"></div>
-
-              <button
-                [ngClass]="
-                  form.invalid
-                    ? 'invalid-button submit-button'
-                    : 'submit-button'
-                "
-                [disabled]="form.invalid"
-                color="accent"
-                type="submit"
-              >
-                <i class="ph ph-paper-plane-right icon"></i> Pošalji
-              </button>
-            </form>
-          </div>
+          <app-booking-form [beState]="beState"></app-booking-form>
 
           <!-- info -->
-          <div class="info-section">
-            <p class="icon-outer-container price-row">
-              <i class="ph ph-currency-eur icon"></i
-              ><strong class="info-label">Cijena po osobi:</strong
-              >{{ pricePerPerson }} EUR<i class="ph ph-info info-icon"></i>
-            </p>
-            <p class="icon-outer-container info-row">
-              <i class="ph ph-clock icon"></i
-              ><strong><span class="info-label">Radno vrijeme:</span></strong
-              ><span>Svaki dan&nbsp;</span>{{ startTime }} - {{ endTime }}
-            </p>
-            <p class="icon-outer-container info-row">
-              <i class="ph ph-map-pin icon"></i
-              ><strong class="info-label">Adresa:</strong>
-              {{ address }}
-            </p>
-            <p class="icon-outer-container info-row">
-              <i class="ph ph-phone icon"></i
-              ><strong class="info-label">Telefon:</strong>
-              {{ companyPhone }}
-            </p>
-            <p class="icon-outer-container info-row">
-              <i class="ph ph-envelope icon"></i>
-              <strong class="info-label">E-mail:</strong>
-              <span>{{ companyMail }}</span>
-            </p>
-          </div>
+          <app-info-section [beState]="beState"></app-info-section>
         </div>
+      </div>
+
+      <!-- lower part (recensions) -->
+      <div class="lower-part">
+        <!-- <h2 class="div-title">Što kažu naši gosti?</h2> -->
+        <app-recensions></app-recensions>
       </div>
     </div>
   </div>

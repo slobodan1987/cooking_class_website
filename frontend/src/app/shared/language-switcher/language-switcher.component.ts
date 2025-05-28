@@ -12,7 +12,7 @@ interface LanguageForm {
   selector: 'app-language-switcher',
   imports: [CommonModule, ReactiveFormsModule, FlagPipe],
   templateUrl: './language-switcher.component.html',
-  styleUrl: '../../../styles/styles.scss',
+  styleUrl: './language-switcher.component.scss',
 })
 export class LanguageSwitcherComponent {
   languages: Language[] = LANGUAGES;

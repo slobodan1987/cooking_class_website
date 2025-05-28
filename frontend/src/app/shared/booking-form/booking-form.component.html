@@ -1,0 +1,94 @@
+<div class="booking-form">
+  <h4 class="bullet-container">
+    <i class="ph ph-calendar-check icon"></i>
+    Rezervirajte svoj termin
+  </h4>
+  <form [formGroup]="form">
+    <div formGroupName="bookingForm">
+      <div class="form-field">
+        <label class="input-label icon-outer-container" for="name"
+          ><i class="ph ph-user icon"></i>Ime *</label
+        >
+        <input
+          formControlName="name"
+          class="input-field"
+          required
+          id="name"
+          name="name"
+          type="text"
+        />
+      </div>
+
+      <div class="form-field">
+        <label class="input-label icon-outer-container" for="email"
+          ><i class="ph ph-envelope icon"></i> E-mail *</label
+        >
+        <input
+          formControlName="email"
+          class="input-field"
+          id="email"
+          name="email"
+          type="email"
+        />
+      </div>
+
+      <div class="form-field">
+        <label class="input-label icon-outer-container" for="phone"
+          ><i class="ph ph-phone icon"></i>Broj telefona *</label
+        >
+        <input
+          formControlName="phone"
+          class="input-field"
+          id="phone"
+          name="phone"
+          type="tel"
+        />
+      </div>
+
+      <div class="form-field">
+        <label class="input-label icon-outer-container" for="date"
+          ><i class="ph ph-calendar-blank icon"></i>Datum *</label
+        >
+        <input
+          class="input-field booking-form-date-input-field"
+          formControlName="date"
+          [min]="todayDateStr"
+          [max]="maxDateInFutureStr"
+          id="date"
+          name="date"
+          type="date"
+        />
+      </div>
+
+      <div class="form-field">
+        <label class="input-label icon-outer-container" for="guests"
+          ><i class="ph ph-users-three icon"></i>Broj osoba *</label
+        >
+        <input
+          class="input-field"
+          formControlName="guests"
+          required
+          id="guests"
+          name="guests"
+          type="number"
+          [value]="minPersonsPerClass"
+          [min]="minPersonsPerClass"
+          [max]="maxPersonsPerClass"
+        />
+      </div>
+    </div>
+
+    <div class="booking-form-button-divider"></div>
+
+    <button
+      [ngClass]="
+        form.invalid ? 'invalid-button submit-button' : 'submit-button'
+      "
+      [disabled]="form.invalid"
+      color="accent"
+      type="submit"
+    >
+      <i class="ph ph-paper-plane-right icon"></i> Pošalji
+    </button>
+  </form>
+</div>

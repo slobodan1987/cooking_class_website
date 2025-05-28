@@ -4,44 +4,11 @@
 @use "base/base";
 @use "components/buttons";
 
-.main-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  overflow-x: hidden;
-  padding: 12px;
-}
-
 body {
   background-color: white;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-}
-
-.content {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.bg-image {
-  position: absolute;
-  inset: 0;
-  background-position: center;
-  opacity: 0.8;
-  background: url('/assets/img/plitvice-panorama.jpg');
-  background-blend-mode: overlay;
-  background-size: cover;
-  background-position: center;
-}
-
-.content-inner {
-  position: relative;
-  padding: 24px;
 }
 
 *,
@@ -50,54 +17,8 @@ body {
   box-sizing: border-box;
 }
 
-.carousel-container img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
 .input-field,
 .submit-button {
-  box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.38);
-}
-
-.upper-part {
-  max-width: 1200px;
-  width: 100%;
-}
-
-.main-content {
-  display: flex;
-  flex-direction: row;
-  gap: 48px;
-  max-width: 1200px;
-  width: 100%;
-  justify-content: center;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-.left-column {
-  flex: 2;
-  min-width: 0;
-}
-
-.right-column {
-  flex: 1;
-  min-width: 320px;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.booking-form {
-  padding: 10px;
-  background-color: colors.$neutral-creamy-white-600;
-  border-radius: 5px;
   box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.38);
 }
 
@@ -111,15 +32,22 @@ body {
   align-self: center;
 }
 
-.form-field {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-}
-
 .input-field {
   height: 35px;
   border-radius: 5px;
+}
+
+.input-field.ng-invalid.ng-touched {
+  border: 2px solid red !important;
+}
+
+.input-field.ng-invalid {
+  border: 2px solid black; // neutralna ivica kad je nevalidno, ali nije fokusirano
+}
+
+.input-field:focus {
+  outline: none; // Remove default browser outline
+  border: 2px solid black !important; // Consistent black border
 }
 
 .submit-button {
@@ -131,24 +59,6 @@ body {
 
 .invalid-button {
   background-color: grey;
-}
-
-.input-label {
-  height: 35;
-}
-
-.form-button-divider {
-  height: 35px;
-}
-
-.input-error {
-  border: 2px solid red;
-}
-
-.carousel-container {
-  margin-bottom: 20px;
-  max-width: 1200px;
-  width: 100%
 }
 
 .bullet-container {
@@ -168,96 +78,26 @@ body {
   word-break: break-word;
 }
 
-.info-label {
-  font-weight: bold;
-  margin-right: 4px;
-}
-
-.language-list {
-  display: flex;
-  flex-direction: column;
-}
-
-.language-item {
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  color: colors.$neutral-creamy-white-900;
-
-  img {
-    width: 32px;
-    height: auto;
-  }
-}
-
-.language-switcher-row {
-  display: flex;
-  direction: flex-row;
-}
-
-.language-selection-dropdown {
-  margin-right: 10px;
-  border-radius: 5px;
-
-  box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.38);
-
-}
-
-.email-label {
-  min-width: 4em;
-}
-
-.email-row {
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap; // ako je email predugačak na malim ekranima
-}
-
-.company-mail {
-  word-break: break-all;
-}
-
-.input-field:focus {
-  outline: none; // Remove default browser outline
-  border: 2px solid black !important; // Consistent black border
-}
-
 .div-title {
   margin-top: 18px;
-}
-
-.date-input-field {
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.info-section {
-  padding: 12px 0;
-}
-
-.info-section p.icon-outer-container {
-  align-items: flex-start;
-  gap: 2px;
-  margin-bottom: 10px;
-  word-break: break-word;
 }
 
 .icon-outer-container {
   gap: 4px;
 }
 
-.info-label {
-  margin-right: 5px;
-  margin-bottom: 2px;
-  font-weight: bold;
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
 }
 
-.info-row {
-  font-size: medium;
-  word-break: break-all;
+.input-label {
+  height: 35;
 }
 
-.price-row {
-  font-weight: bold;
-  font-size: large;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }

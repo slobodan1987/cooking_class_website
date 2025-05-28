@@ -1,0 +1,16 @@
+<div class="review-container">
+  <ul class="review-list">
+    <li *ngFor="let review of paginatedReviews" class="review-item">
+      <p>{{ review.text }}</p>
+      <span>{{ review.rating }}</span>
+    </li>
+  </ul>
+</div>
+
+<div class="pagination-controls">
+  <button (click)="prevPage()" [disabled]="currentPage === 1">
+    ⟵ Prethodna
+  </button>
+  <span>Prikaz {{ startIndex }}–{{ endIndex }} od {{ total }}</span>
+  <button (click)="nextPage()" [disabled]="endIndex >= total">Sledeća ⟶</button>
+</div>

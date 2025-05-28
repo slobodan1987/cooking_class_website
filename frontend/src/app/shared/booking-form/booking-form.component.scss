@@ -1,0 +1,17 @@
+@use "styles/abstracts/colors";
+
+.booking-form {
+    padding: 10px;
+    background-color: colors.$neutral-creamy-white-600;
+    border-radius: 5px;
+    box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.38);
+}
+
+.booking-form-date-input-field {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.booking-form-button-divider {
+    height: 35px;
+}

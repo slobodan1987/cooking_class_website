@@ -1,0 +1,65 @@
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow-x: hidden;
+    padding: 12px;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bg-image {
+    position: absolute;
+    inset: 0;
+    background-position: center;
+    opacity: 0.8;
+    background: url('/assets/img/plitvice-panorama.jpg');
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+}
+
+.content-inner {
+    position: relative;
+    padding: 24px;
+}
+
+.upper-part {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.left-column {
+    flex: 2;
+    min-width: 0;
+}
+
+.right-column {
+    flex: 1;
+    min-width: 320px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}

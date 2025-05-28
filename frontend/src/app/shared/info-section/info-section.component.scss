@@ -1,0 +1,21 @@
+.info-section {
+    padding: 12px 0;
+}
+
+.info-label {
+    margin-right: 5px;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+
+.info-row {
+    font-size: medium;
+    word-break: break-all;
+}
+
+.info-section p.icon-outer-container {
+    align-items: flex-start;
+    gap: 2px;
+    margin-bottom: 10px;
+    word-break: break-word;
+}

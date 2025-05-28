@@ -1,9 +1,11 @@
-<div class="carousel-wrapper">
-  <button class="scroll-button left" (click)="scrollLeft()">❮</button>
+<div class="carousel-container">
+  <div class="carousel-wrapper">
+    <button class="scroll-button left" (click)="scrollLeft()">❮</button>
 
-  <div class="carousel-strip" #carousel>
-    <img class="car-img" *ngFor="let img of images" [src]="img" alt="carousel image" />
+    <div class="carousel-strip" #carousel>
+      <img *ngFor="let img of images" [src]="img" alt="carousel image" />
+    </div>
+
+    <button class="scroll-button right" (click)="scrollRight()">❯</button>
   </div>
-
-  <button class="scroll-button right" (click)="scrollRight()">❯</button>
 </div>
