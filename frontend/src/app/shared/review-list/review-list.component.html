@@ -1,15 +1,12 @@
-<div class="review-main-container">
-  <div class="review-list-container">
-    <ul class="review-list">
-      <li *ngFor="let review of paginatedReviews" class="review-item">
-        <h3 class="review-author">{{ review.author }}</h3>
-        <p class="review-comment">
-          <em>{{ review.comment }}</em>
-        </p>
-      </li>
-    </ul>
-  </div>
-
+<div class="review-list-container">
+  <ul class="review-list">
+    <li *ngFor="let review of paginatedReviews" class="review-item">
+      <h3 class="review-author">{{ review.author }}</h3>
+      <p class="review-comment">
+        <em>{{ review.comment }}</em>
+      </p>
+    </li>
+  </ul>
   <div class="pagination-controls">
     <button
       class="review-list-navigation"

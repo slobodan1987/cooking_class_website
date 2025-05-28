@@ -1,110 +1,114 @@
-<div class="booking-form">
-  <h4 class="bullet-container">
-    <i class="ph ph-calendar-check icon"></i>
-    Zatraži rezervaciju
-  </h4>
-  <form [formGroup]="form">
-    <div formGroupName="bookingForm">
-      <div class="form-field">
-        <label class="input-label icon-outer-container" for="name"
-          ><i class="ph ph-user icon"></i>Ime *</label
-        >
-        <input
-          formControlName="name"
-          class="input-field"
-          required
-          id="name"
-          name="name"
-          type="text"
-        />
-      </div>
-
-      <div class="form-field">
-        <label class="input-label icon-outer-container" for="email"
-          ><i class="ph ph-envelope icon"></i> E-mail *</label
-        >
-        <input
-          formControlName="email"
-          class="input-field"
-          id="email"
-          name="email"
-          type="email"
-        />
-      </div>
-
-      <div class="form-field">
-        <label class="input-label icon-outer-container" for="phone"
-          ><i class="ph ph-phone icon"></i>Broj telefona *</label
-        >
-        <input
-          formControlName="phone"
-          class="input-field"
-          id="phone"
-          name="phone"
-          type="tel"
-        />
-      </div>
-
-      <div class="form-field">
-        <label class="input-label icon-outer-container" for="date"
-          ><i class="ph ph-calendar-blank icon"></i>Datum *</label
-        >
-        <input
-          class="input-field booking-form-date-input-field"
-          formControlName="date"
-          [min]="todayDateStr"
-          [max]="maxDateInFutureStr"
-          id="date"
-          name="date"
-          type="date"
-        />
-      </div>
-
-      <div class="form-field">
-        <label class="input-label icon-outer-container" for="guests"
-          ><i class="ph ph-users-three icon"></i>Broj osoba *</label
-        >
-        <input
-          class="input-field"
-          formControlName="guests"
-          required
-          id="guests"
-          name="guests"
-          type="number"
-          [value]="minPersonsPerClass"
-          [min]="minPersonsPerClass"
-          [max]="maxPersonsPerClass"
-        />
-      </div>
-
-      <div class="form-field">
-        <label class="input-label icon-outer-container" for="message"
-          ><i class="ph ph-chat-circle icon"></i>Poruka</label
-        >
-        <textarea
-          class="message-textarea"
-          placeholder="Ovde možete uneti dodatne informacije (npr. jezik, posebne zahteve...)"
-          formControlName="message"
-          id="message"
-          name="message"
-          type="text"
-        ></textarea>
-      </div>
+<form [formGroup]="form" class="booking-form">
+  <ng-container formGroupName="bookingForm">
+    <h4 class="bullet-container">
+      <i class="ph ph-calendar-check icon"></i>
+      Zatraži rezervaciju
+    </h4>
+    <div class="form-field">
+      <label class="input-label icon-outer-container" for="name"
+        ><i class="ph ph-user icon"></i>Ime *</label
+      >
+      <input
+        formControlName="name"
+        class="input-field"
+        required
+        id="name"
+        name="name"
+        type="text"
+      />
     </div>
 
-    <p class="bullet-container">
-      <i class="ph ph-warning-circle icon"></i>Ova rezervacija NIJE automatski
-      potvrđena.
-    </p>
+    <div class="form-field">
+      <label class="input-label icon-outer-container" for="email"
+        ><i class="ph ph-envelope icon"></i> E-mail *</label
+      >
+      <input
+        formControlName="email"
+        class="input-field"
+        id="email"
+        name="email"
+        type="email"
+      />
+    </div>
 
-    <p class="bullet-container">
-      <i class="ph ph-info icon"></i>Termini se brzo popunjavaju i dostupnost
-      može varirati.
-    </p>
+    <div class="form-field">
+      <label class="input-label icon-outer-container" for="phone"
+        ><i class="ph ph-phone icon"></i>Broj telefona *</label
+      >
+      <input
+        formControlName="phone"
+        class="input-field"
+        id="phone"
+        name="phone"
+        type="tel"
+      />
+    </div>
 
-    <p class="bullet-container">
-      <i class="ph ph-info icon"></i>Plaćanje se vrši u gotovini nakon događaja.
-    </p>
+    <div class="form-field">
+      <label class="input-label icon-outer-container" for="date"
+        ><i class="ph ph-calendar-blank icon"></i>Datum *</label
+      >
+      <input
+        class="input-field booking-form-date-input-field"
+        formControlName="date"
+        [min]="todayDateStr"
+        [max]="maxDateInFutureStr"
+        id="date"
+        name="date"
+        type="date"
+      />
+    </div>
+
+    <div class="form-field">
+      <label class="input-label icon-outer-container" for="guests"
+        ><i class="ph ph-users-three icon"></i>Broj osoba *</label
+      >
+      <input
+        class="input-field"
+        formControlName="guests"
+        required
+        id="guests"
+        name="guests"
+        type="number"
+        [value]="minPersonsPerClass"
+        [min]="minPersonsPerClass"
+        [max]="maxPersonsPerClass"
+      />
+    </div>
+
+    <div class="form-field">
+      <label class="input-label icon-outer-container" for="message"
+        ><i class="ph ph-chat-circle icon"></i>Poruka</label
+      >
+      <textarea
+        class="message-textarea"
+        placeholder="Ovde možete uneti dodatne informacije (npr. jezik, posebne zahteve...)"
+        formControlName="message"
+        id="message"
+        name="message"
+        type="text"
+      ></textarea>
+    </div>
+
+    <div class="bookig-info">
+      <p class="bullet-container">
+        <i class="ph ph-warning-circle icon"></i>Ova rezervacija NIJE automatski
+        potvrđena.
+      </p>
+
+      <p class="bullet-container">
+        <i class="ph ph-info icon"></i>Termini se brzo popunjavaju i dostupnost
+        može varirati.
+      </p>
+
+      <p class="bullet-container">
+        <i class="ph ph-currency-eur icon"></i
+        ><span
+          >Plaćanje se vrši u gotovini nakon događaja. Cena po osobi je
+          <strong>{{ pricePerPerson }} EUR</strong>.</span
+        >
+      </p>
+    </div>
 
     <button
       [ngClass]="
@@ -116,5 +120,5 @@
     >
       <i class="ph ph-paper-plane-right icon"></i> Zatraži rezervaciju
     </button>
-  </form>
-</div>
+  </ng-container>
+</form>

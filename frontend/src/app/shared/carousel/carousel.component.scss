@@ -1,5 +1,4 @@
 .carousel-container {
-    margin-bottom: 16px;
     max-width: 1200px;
     width: 100%
 }
@@ -13,7 +12,7 @@
 .carousel-strip {
     display: flex;
     overflow-x: auto;
-    gap: 10px;
+    gap: 8px;
     width: 100%;
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -27,8 +26,8 @@
     object-fit: cover;
     display: block;
     flex-shrink: 0;
-    border-radius: 5px;
-    box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.38);
+    border-radius: 4px;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.38);
 }
 
 .scroll-button {
@@ -44,11 +43,11 @@
     z-index: 1;
 
     &.left {
-        left: 10px;
+        left: 8px;
     }
 
     &.right {
-        right: 10px;
+        right: 8px;
     }
 
     &:hover {

@@ -1,5 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { CarouselComponent } from './shared/carousel/carousel.component';
 import { LanguageSwitcherComponent } from './shared/language-switcher/language-switcher.component';
 import { mockEmptyBeState } from './shared/models/mock';

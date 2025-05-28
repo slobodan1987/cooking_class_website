@@ -7,7 +7,7 @@
     padding: 24px;
 
     @media (max-width: 768px) {
-        padding: 8px;
+        padding: 16px;
     }
 }
 
@@ -15,7 +15,7 @@
     position: relative;
     width: 100%;
     max-width: 1200px;
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
 }
 
@@ -45,36 +45,29 @@
 }
 
 .main-content {
-    display: flex;
     flex-direction: row;
     max-width: 1200px;
     width: 100%;
-    justify-content: center;
-    align-items: stretch;
+    height: 100%;
+    display: flex;
+    gap: 32px;
 
     @media (max-width: 768px) {
         flex-direction: column;
-        align-items: center;
+        max-width: 1200px;
+        width: 100%;
     }
 }
 
 .custom-column {
-    flex: 1;
     display: flex;
     flex-direction: column;
+    width: 100%;
     height: 100%;
-    box-sizing: border-box; // Moved above the nested rule
-    padding: 24px;
-
-    @media (max-width: 768px) {
-        padding: 8px;
-    }
 }
 
 .div-title {
-    margin-top: 16px;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: large;
     font-weight: 700;
-    margin-bottom: 16px;
 }

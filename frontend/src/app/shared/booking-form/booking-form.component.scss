@@ -3,16 +3,23 @@
 .booking-form {
     padding: 24px;
     background-color: colors.$neutral-creamy-white-500;
-    border-radius: 5px;
-    box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.38);
+    border-radius: 4px;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.38);
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    height: 100%;
+    height: 1000px;
+    justify-content: space-between;
 
     @media (max-width: 768px) {
-        padding: 8px;
+        padding: 16px;
     }
+}
+
+.booking-info {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .booking-form-date-input-field {
@@ -21,15 +28,15 @@
 }
 
 .booking-form-button-divider {
-    height: 35px;
+    height: 32px;
 }
 
 .message-textarea {
     width: 100%;
-    border-radius: 5px;
+    border-radius: 4px;
     height: 120px; // ili bilo koja visina koja ti odgovara
     resize: none; // sprečava korisnika da menja veličinu
-    box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.38);
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.38);
 }
 
 .message-textarea:focus {
