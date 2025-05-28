@@ -44,71 +44,71 @@
         <app-carousel></app-carousel>
       </div>
 
+      <!-- left middle part (bullets, ...) -->
+      <div>
+        <!-- bullets (description) -->
+        <div>
+          <div class="div-title">
+            <h2>Što vas očekuje?</h2>
+          </div>
+
+          <div>
+            <p class="bullet-container">
+              <i class="ph ph-cooking-pot icon"></i>Edukacija i priprema
+              tradicionalnih jela uz stručne i srdačne domaćine
+            </p>
+            <p class="bullet-container">
+              <i class="ph ph-leaf icon"></i>Korištenje lokalnih, svježih
+              sastojaka – iz vrta, s tržnice ili iz prirode
+            </p>
+            <p class="bullet-container">
+              <i class="ph ph-house icon"></i>Nezaboravno druženje u rustikalnom
+              ambijentu
+            </p>
+            <p class="bullet-container">
+              <i class="ph ph-wine icon"></i>Kušanje vlastitih kulinarskih
+              remek-djela uz domaće vino i rakiju
+            </p>
+            <p class="bullet-container">
+              <i class="ph ph-heart icon"></i>Trenuci koje ćete ponijeti kući –
+              ne u torbi, nego u srcu
+            </p>
+          </div>
+        </div>
+
+        <!-- description ending -->
+        <div>
+          <div>
+            Ovo nije samo kuhanje – ovo je spajanje s kulturom, s ljudima i s
+            prirodom Plitvičkih jezera. Ako tražite nešto istinski autentično,
+            daleko od turističke vreve, dođite da zajedno zapalimo vatru,
+            razvaljamo tijesto i zapečemo uspomene koje će trajati zauvijek.
+          </div>
+        </div>
+
+        <!-- final word -->
+        <div class="div-title">
+          <h2>Rezervirajte svoje mjesto za stolom – obitelj vas čeka!</h2>
+        </div>
+      </div>
+
       <!-- middle part -->
       <div class="main-content">
-        <!-- left middle part (bullets, ...) -->
-        <div class="left-column">
-          <!-- bullets (description) -->
-          <div>
-            <div>
-              <h2>Što vas očekuje?</h2>
-            </div>
-
-            <div>
-              <p class="bullet-container">
-                <i class="ph ph-cooking-pot icon"></i>Edukacija i priprema
-                tradicionalnih jela uz stručne i srdačne domaćine
-              </p>
-              <p class="bullet-container">
-                <i class="ph ph-leaf icon"></i>Korištenje lokalnih, svježih
-                sastojaka – iz vrta, s tržnice ili iz prirode
-              </p>
-              <p class="bullet-container">
-                <i class="ph ph-house icon"></i>Nezaboravno druženje u
-                rustikalnom ambijentu
-              </p>
-              <p class="bullet-container">
-                <i class="ph ph-wine icon"></i>Kušanje vlastitih kulinarskih
-                remek-djela uz domaće vino i rakiju
-              </p>
-              <p class="bullet-container">
-                <i class="ph ph-heart icon"></i>Trenuci koje ćete ponijeti kući
-                – ne u torbi, nego u srcu
-              </p>
-            </div>
-          </div>
-
-          <!-- description ending -->
-          <div>
-            <div>
-              Ovo nije samo kuhanje – ovo je spajanje s kulturom, s ljudima i s
-              prirodom Plitvičkih jezera. Ako tražite nešto istinski autentično,
-              daleko od turističke vreve, dođite da zajedno zapalimo vatru,
-              razvaljamo tijesto i zapečemo uspomene koje će trajati zauvijek.
-            </div>
-          </div>
-
-          <!-- final word -->
-          <div class="div-title">
-            <h2>Rezervirajte svoje mjesto za stolom – obitelj vas čeka!</h2>
-          </div>
-        </div>
-
-        <!-- booking form & info column (right middle part) -->
-        <div class="right-column">
+        <!-- booking form & info column (left part) -->
+        <div class="custom-column">
           <!-- booking form -->
           <app-booking-form [beState]="beState"></app-booking-form>
+        </div>
 
-          <!-- info -->
-          <app-info-section [beState]="beState"></app-info-section>
+        <!-- lower part (recensions) -->
+        <div class="custom-column">
+          <!-- <h2 class="div-title">Što kažu naši gosti?</h2> -->
+          <app-review-list></app-review-list>
         </div>
       </div>
 
-      <!-- lower part (recensions) -->
-      <div class="lower-part">
-        <!-- <h2 class="div-title">Što kažu naši gosti?</h2> -->
-        <app-recensions></app-recensions>
-      </div>
+      <!-- info -->
+      <app-info-section [beState]="beState"></app-info-section>
     </div>
   </div>
 </div>

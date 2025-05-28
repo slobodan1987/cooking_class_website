@@ -1,0 +1,65 @@
+@use "styles/abstracts/colors";
+
+.review-main-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+}
+
+.review-list-container {
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: colors.$neutral-creamy-white-500;
+    padding: 24px;
+    box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.38);
+
+    @media (max-width: 768px) {
+        padding: 8px;
+    }
+}
+
+.review-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.review-item {
+    border-bottom: 1px solid colors.$neutral-creamy-white-700;
+    padding: 4px 0;
+}
+
+.review-author {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: colors.$neutral-creamy-white-900;
+}
+
+.review-comment {
+    margin: 4px 0 0;
+    font-style: italic;
+    color: colors.$neutral-creamy-white-800;
+}
+
+.pagination-controls {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button:disabled {
+    background-color: colors.$neutral-creamy-white-700;
+    cursor: not-allowed;
+}
+
+.review-list-navigation {
+    height: 35px;
+    background-color: colors.$secondary-olive-green-700;
+    border-radius: 5px;
+    box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.38);
+    color: colors.$secondary-olive-green-100;
+}

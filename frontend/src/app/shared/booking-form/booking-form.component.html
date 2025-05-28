@@ -1,7 +1,7 @@
 <div class="booking-form">
   <h4 class="bullet-container">
     <i class="ph ph-calendar-check icon"></i>
-    Rezervirajte svoj termin
+    Zatraži rezervaciju
   </h4>
   <form [formGroup]="form">
     <div formGroupName="bookingForm">
@@ -76,9 +76,35 @@
           [max]="maxPersonsPerClass"
         />
       </div>
+
+      <div class="form-field">
+        <label class="input-label icon-outer-container" for="message"
+          ><i class="ph ph-chat-circle icon"></i>Poruka</label
+        >
+        <textarea
+          class="message-textarea"
+          placeholder="Ovde možete uneti dodatne informacije (npr. jezik, posebne zahteve...)"
+          formControlName="message"
+          id="message"
+          name="message"
+          type="text"
+        ></textarea>
+      </div>
     </div>
 
-    <div class="booking-form-button-divider"></div>
+    <p class="bullet-container">
+      <i class="ph ph-warning-circle icon"></i>Ova rezervacija NIJE automatski
+      potvrđena.
+    </p>
+
+    <p class="bullet-container">
+      <i class="ph ph-info icon"></i>Termini se brzo popunjavaju i dostupnost
+      može varirati.
+    </p>
+
+    <p class="bullet-container">
+      <i class="ph ph-info icon"></i>Plaćanje se vrši u gotovini nakon događaja.
+    </p>
 
     <button
       [ngClass]="
@@ -88,7 +114,7 @@
       color="accent"
       type="submit"
     >
-      <i class="ph ph-paper-plane-right icon"></i> Pošalji
+      <i class="ph ph-paper-plane-right icon"></i> Zatraži rezervaciju
     </button>
   </form>
 </div>

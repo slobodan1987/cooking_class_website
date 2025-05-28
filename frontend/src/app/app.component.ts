@@ -4,9 +4,9 @@ import { CarouselComponent } from './shared/carousel/carousel.component';
 import { LanguageSwitcherComponent } from './shared/language-switcher/language-switcher.component';
 import { mockEmptyBeState } from './shared/models/mock';
 import { IBEState } from './shared/models/model';
-import { RecensionsComponent } from './shared/recensions/recensions.component';
 import { BookingFormComponent } from './shared/booking-form/booking-form.component';
 import { InfoSectionComponent } from './shared/info-section/info-section.component';
+import { ReviewListComponent } from './shared/review-list/review-list.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,7 +15,7 @@ import { InfoSectionComponent } from './shared/info-section/info-section.compone
     CommonModule,
     CarouselComponent,
     LanguageSwitcherComponent,
-    RecensionsComponent,
+    ReviewListComponent,
     BookingFormComponent,
     InfoSectionComponent,
   ],

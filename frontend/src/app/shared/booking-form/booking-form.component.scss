@@ -1,10 +1,18 @@
 @use "styles/abstracts/colors";
 
 .booking-form {
-    padding: 10px;
-    background-color: colors.$neutral-creamy-white-600;
+    padding: 24px;
+    background-color: colors.$neutral-creamy-white-500;
     border-radius: 5px;
     box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.38);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+
+    @media (max-width: 768px) {
+        padding: 8px;
+    }
 }
 
 .booking-form-date-input-field {
@@ -14,4 +22,17 @@
 
 .booking-form-button-divider {
     height: 35px;
+}
+
+.message-textarea {
+    width: 100%;
+    border-radius: 5px;
+    height: 120px; // ili bilo koja visina koja ti odgovara
+    resize: none; // sprečava korisnika da menja veličinu
+    box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.38);
+}
+
+.message-textarea:focus {
+    outline: none; // Remove default browser outline
+    border: 2px solid black !important; // Consistent black border
 }

@@ -4,7 +4,11 @@
     align-items: center;
     width: 100%;
     overflow-x: hidden;
-    padding: 12px;
+    padding: 24px;
+
+    @media (max-width: 768px) {
+        padding: 8px;
+    }
 }
 
 .content {
@@ -28,7 +32,11 @@
 
 .content-inner {
     position: relative;
-    padding: 24px;
+    padding: 48px;
+
+    @media (max-width: 768px) {
+        padding: 16px;
+    }
 }
 
 .upper-part {
@@ -39,10 +47,10 @@
 .main-content {
     display: flex;
     flex-direction: row;
-    gap: 48px;
     max-width: 1200px;
     width: 100%;
     justify-content: center;
+    align-items: stretch;
 
     @media (max-width: 768px) {
         flex-direction: column;
@@ -50,16 +58,23 @@
     }
 }
 
-.left-column {
-    flex: 2;
-    min-width: 0;
-}
-
-.right-column {
+.custom-column {
     flex: 1;
-    min-width: 320px;
-    max-width: 400px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    height: 100%;
+    box-sizing: border-box; // Moved above the nested rule
+    padding: 24px;
+
+    @media (max-width: 768px) {
+        padding: 8px;
+    }
+}
+
+.div-title {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 16px;
 }

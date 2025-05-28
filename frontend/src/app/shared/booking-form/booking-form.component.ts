@@ -19,6 +19,7 @@ interface BookingForm {
   phone: FormControl<string | null>;
   date: FormControl<string | null>;
   guests: FormControl<number | null>;
+  message?: FormControl<string | null>;
 }
 
 interface Form {
@@ -145,6 +146,13 @@ export class BookingFormComponent {
           Validators.max(this.maxPersonsPerClass ?? 12),
           Validators.required,
         ]),
+        message: new FormControl<string | null>(
+          {
+            value: null,
+            disabled: false,
+          },
+          []
+        ),
       }),
     });
   }
