@@ -1,4 +1,10 @@
-import { Component, Input } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Input,
+  ViewChild,
+} from '@angular/core';
 import {
   AbstractControl,
   FormControl,
@@ -12,6 +18,7 @@ import {
 import { IBEState } from '../models/model';
 // Or, if the file does not exist, create 'model.ts' in the correct directory with the IBEState definition.
 import { CommonModule } from '@angular/common';
+import flatpickr from 'flatpickr';
 
 interface BookingForm {
   name: FormControl<string | null>;
@@ -33,7 +40,9 @@ interface Form {
   templateUrl: './booking-form.component.html',
   styleUrl: './booking-form.component.scss',
 })
-export class BookingFormComponent {
+export class BookingFormComponent implements AfterViewInit {
+  @ViewChild('dateInput', { static: true })
+  dateInput!: ElementRef<HTMLInputElement>;
   private _beState: IBEState | null = null;
 
   @Input()
@@ -45,8 +54,9 @@ export class BookingFormComponent {
     return this._beState;
   }
 
+  allowedDates: string[] = [];
+
   todayDate: Date | null = null;
-  todayDateStr: string | null = null;
   pricePerPerson: number | null = null;
 
   startTime: string | null = null;
@@ -58,17 +68,8 @@ export class BookingFormComponent {
 
   minPersonsPerClass: number | null = null;
   maxPersonsPerClass: number | null = null;
-  maxDaysInFuture: number | null = null;
-
-  maxDateInFuture: Date | null = null;
-  maxDateInFutureStr: string | null = null;
 
   form: FormGroup<Form> = this.createForm();
-
-  stripTime(date: Date | null): Date | null {
-    if (!date) return null;
-    return new Date(date.getFullYear(), date.getMonth(), date.getDate());
-  }
 
   phoneValidator(): ValidatorFn {
     return (control: AbstractControl<any, any>): ValidationErrors | null => {
@@ -97,59 +98,40 @@ export class BookingFormComponent {
     };
   }
 
-  dateRangeValidator(min: Date | null, max: Date | null): ValidatorFn {
-    return (control: AbstractControl<any, any>): ValidationErrors | null => {
-      const value = new Date(control.value as string);
-
-      if (isNaN(value.getTime())) return null; // skip if not a valid date
-
-      const minStripped = this.stripTime(min);
-      const maxStripped = this.stripTime(max);
-      const valueStripped = this.stripTime(value);
-
-      if (
-        (minStripped && valueStripped && valueStripped < minStripped) ||
-        (maxStripped && valueStripped && valueStripped > maxStripped)
-      ) {
-        return { dateOutOfRange: true };
-      }
-      return null;
-    };
-  }
-
   createForm(): FormGroup<Form> {
     return new FormGroup<Form>({
       bookingForm: new FormGroup<BookingForm>({
-        name: new FormControl<string | null>({ value: null, disabled: false }, [
+        name: new FormControl<string | null>({ value: null, disabled: true }, [
           Validators.required,
         ]),
-        email: new FormControl<string | null>(
-          { value: null, disabled: false },
-          [Validators.required, this.eMailValidator()]
-        ),
-        phone: new FormControl<string | null>(
-          { value: null, disabled: false },
-          [Validators.required, this.phoneValidator()]
-        ),
+        email: new FormControl<string | null>({ value: null, disabled: true }, [
+          Validators.required,
+          this.eMailValidator(),
+        ]),
+        phone: new FormControl<string | null>({ value: null, disabled: true }, [
+          Validators.required,
+          this.phoneValidator(),
+        ]),
         date: new FormControl<string | null>(
           {
             value: null,
-            disabled: false,
+            disabled: true,
           },
+          [Validators.required]
+        ),
+        // guests: new FormControl<number | null>({ value: 2, disabled: true }, [
+        guests: new FormControl<number | null>(
+          { value: null, disabled: true },
           [
-            this.dateRangeValidator(this.todayDate, this.maxDateInFuture),
+            Validators.min(this.minPersonsPerClass ?? 2),
+            Validators.max(this.maxPersonsPerClass ?? 12),
             Validators.required,
           ]
         ),
-        guests: new FormControl<number | null>({ value: 2, disabled: false }, [
-          Validators.min(this.minPersonsPerClass ?? 2),
-          Validators.max(this.maxPersonsPerClass ?? 12),
-          Validators.required,
-        ]),
         message: new FormControl<string | null>(
           {
             value: null,
-            disabled: false,
+            disabled: true,
           },
           []
         ),
@@ -157,9 +139,18 @@ export class BookingFormComponent {
     });
   }
 
+  ngAfterViewInit() {
+    if (this.dateInput) {
+      flatpickr(this.dateInput.nativeElement, {
+        enable: this.allowedDates,
+        allowInput: false,
+        disableMobile: true,
+      });
+    }
+  }
+
   setup() {
     this.todayDate = new Date();
-    this.todayDateStr = this.todayDate.toISOString().split('T')[0];
     this.pricePerPerson = this.beState?.companyData?.pricePerPerson ?? null;
 
     this.startTime = this.beState?.companyData?.startTime ?? null;
@@ -174,11 +165,8 @@ export class BookingFormComponent {
     this.maxPersonsPerClass =
       this.beState?.companyData?.maxPersonsPerClass ?? null;
 
-    this.maxDateInFuture = new Date(
-      new Date().getTime() +
-        (this.beState?.companyData?.maxDaysInFuture ?? 0) * 24 * 60 * 60 * 1000
-    );
-    this.maxDateInFutureStr = this.maxDateInFuture.toISOString().split('T')[0];
+    this.allowedDates = this.beState?.dates?.map((date) => date?.date) ?? [];
+
     this.form = this.createForm();
   }
 }

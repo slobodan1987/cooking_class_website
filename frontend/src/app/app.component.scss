@@ -11,6 +11,14 @@
     }
 }
 
+.logo {
+    width: 300px;
+
+    @media (max-width: 768px) {
+        width: 120px;
+    }
+}
+
 .content {
     position: relative;
     width: 100%;

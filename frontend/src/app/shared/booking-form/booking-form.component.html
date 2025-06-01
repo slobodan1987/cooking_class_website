@@ -1,12 +1,26 @@
 <form [formGroup]="form" class="booking-form">
   <ng-container formGroupName="bookingForm">
+    <div class="temporary-booking-form-message">
+      <div class="bullet-container">
+        <i class="ph ph-clock icon"></i
+        ><strong>Rezervacije uskoro dostupne! </strong>
+      </div>
+      <span
+        >Do tada nas za rezervacije kontaktirajte putem telefona ili e-maila
+        navedenih na stranici. Hvala na strpljenju!</span
+      >
+    </div>
+
+    <hr class="separator" />
+
     <h4 class="bullet-container">
       <i class="ph ph-calendar-check icon"></i>
       Zatraži rezervaciju
     </h4>
+
     <div class="form-field">
       <label class="input-label icon-outer-container" for="name"
-        ><i class="ph ph-user icon"></i>Ime *</label
+        ><i class="ph ph-user-circle icon"></i>Ime i prezime *</label
       >
       <input
         formControlName="name"
@@ -20,7 +34,7 @@
 
     <div class="form-field">
       <label class="input-label icon-outer-container" for="email"
-        ><i class="ph ph-envelope icon"></i> E-mail *</label
+        ><i class="ph ph-envelope icon"></i> E-mail adresa *</label
       >
       <input
         formControlName="email"
@@ -33,7 +47,7 @@
 
     <div class="form-field">
       <label class="input-label icon-outer-container" for="phone"
-        ><i class="ph ph-phone icon"></i>Broj telefona *</label
+        ><i class="ph ph-phone icon"></i>Broj mobitela *</label
       >
       <input
         formControlName="phone"
@@ -50,12 +64,11 @@
       >
       <input
         class="input-field booking-form-date-input-field"
+        #dateInput
         formControlName="date"
-        [min]="todayDateStr"
-        [max]="maxDateInFutureStr"
         id="date"
         name="date"
-        type="date"
+        type="text"
       />
     </div>
 
@@ -82,7 +95,7 @@
       >
       <textarea
         class="message-textarea"
-        placeholder="Ovde možete uneti dodatne informacije (npr. jezik, posebne zahteve...)"
+        placeholder="Ovdje možete navesti dodatne informacije (npr. jezik, posebne zahtjeve...)"
         formControlName="message"
         id="message"
         name="message"
@@ -91,7 +104,7 @@
     </div>
 
     <div class="bookig-info">
-      <p class="bullet-container">
+      <!-- <p class="bullet-container">
         <i class="ph ph-warning-circle icon"></i>Ova rezervacija NIJE automatski
         potvrđena.
       </p>
@@ -99,26 +112,35 @@
       <p class="bullet-container">
         <i class="ph ph-info icon"></i>Termini se brzo popunjavaju i dostupnost
         može varirati.
+      </p> -->
+
+      <p class="bullet-container">
+        <i class="ph ph-users-three icon"></i
+        ><span
+          >Događaju može prisustvovati od 2 do 12 osoba. Moguće je kombinirati
+          više grupa.
+        </span>
       </p>
 
       <p class="bullet-container">
         <i class="ph ph-currency-eur icon"></i
         ><span
-          >Plaćanje se vrši u gotovini nakon događaja. Cena po osobi je
+          >Plaćanje se vrši nakon događaja – gotovinom, karticom ili virmanom.
+          Cijena po osobi iznosi
           <strong>{{ pricePerPerson }} EUR</strong>.</span
         >
       </p>
     </div>
 
-    <button
-      [ngClass]="
-        form.invalid ? 'invalid-button submit-button' : 'submit-button'
-      "
-      [disabled]="form.invalid"
-      color="accent"
-      type="submit"
-    >
-      <i class="ph ph-paper-plane-right icon"></i> Zatraži rezervaciju
-    </button>
+    <div>
+      <button
+        class="invalid-button submit-button"
+        [disabled]="true"
+        color="accent"
+        type="submit"
+      >
+        <i class="ph ph-paper-plane-right icon"></i> Zatraži rezervaciju
+      </button>
+    </div>
   </ng-container>
 </form>

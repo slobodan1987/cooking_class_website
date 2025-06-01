@@ -7,11 +7,12 @@
     box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.38);
     display: flex;
     flex-direction: column;
-    height: 1000px;
+    height: 1200px;
     justify-content: space-between;
 
     @media (max-width: 768px) {
         padding: 16px;
+        height: 1300px;
     }
 }
 
@@ -43,3 +44,23 @@
     outline: none; // Remove default browser outline
     border: 2px solid black !important; // Consistent black border
 }
+
+.temporary-booking-form-message {
+    font-style: italic;
+}
+
+.separator {
+    border: none;
+    border-top: 1px solid colors.$neutral-creamy-white-600;
+    margin: 0.75em 0;
+}
+
+// .temporary-submit-button {
+//     width: 100%;
+//     height: 32px;
+//     // background-color: colors.$secondary-olive-green-700;
+//     border-radius: 4px;
+//     box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.38);
+//     background-color: colors.$neutral-creamy-white-700;
+//     cursor: not-allowed;
+// }

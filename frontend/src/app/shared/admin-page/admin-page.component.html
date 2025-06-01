@@ -1,0 +1,34 @@
+Dobrodošli na administratorsku stranicu!
+
+<fieldset>
+  <legend>Upravljanje rezervacijama</legend>
+</fieldset>
+
+<fieldset>
+  <legend>Upravljanje podacima</legend>
+  <ul>
+    <li>Ime kompanije: {{ beState?.companyData?.name }}</li>
+    <li>Adresa kompanije: {{ beState?.companyData?.address }}</li>
+    <li>Telefon kompanije:</li>
+    <li>E-mail kompanije:</li>
+    <li>
+      Vreme početka događaja (ako nije drugačije naznačeno u pojedinačnom
+      datumu):
+      {{ beState?.companyData?.startTime }}
+    </li>
+    <li>
+      Vreme završetka događaja (ako nije drugačije naznačeno u pojedinačnom
+      datumu): {{ beState?.companyData?.endTime }}
+    </li>
+    <li>
+      Minimalan broj učesnika u događaju:
+      {{ beState?.companyData?.minPersonsPerClass }}
+    </li>
+    <li>
+      Maksimalan broj učesnika u događaju:
+      {{ beState?.companyData?.maxPersonsPerClass }}
+    </li>
+    <li>Cena po osobi: {{ beState?.companyData?.pricePerPerson }}</li>
+    <li>Google koordinate: {{ beState?.companyData?.googleCoordinates }}</li>
+  </ul>
+</fieldset>

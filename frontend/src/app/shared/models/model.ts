@@ -29,11 +29,21 @@ export interface IDate {
    */
   bookings: IBooking[];
   /**
-   * status of the date
-   * - 'OPEN': date is available for bookings
-   * - 'CLOSED': date is not available for bookings (e.g. on public holidays, etc.)
+   * status
    */
-  status: 'OPEN' | 'CLOSED';
+  status: 'AVAILABLE' | 'UNAVAILABLE';
+  /**
+   * custom start date for the date
+   * - this is used to override the default start time for the date
+   * - it is optional and can be left empty
+   */
+  customStartDate?: string;
+  /**
+   * custom end date for the date
+   * - this is used to override the default end time for the date
+   * - it is optional and can be left empty
+   */
+  customEndDate?: string;
 }
 
 /**
@@ -60,13 +70,23 @@ export interface IBooking {
    * number of guests for the booking
    */
   guests: number;
-
+  /**
+   * message for the booking
+   * - this can be used to provide additional information or requests for the booking
+   * - it is optional and can be left empty
+   */
+  message?: string;
   /**
    * status of the booking
    * - 'WAITING_FOR_CONFIRMATION': booking is waiting for confirmation
    * - 'CONFIRMED': booking is confirmed
    */
   status: 'WAITING_FOR_CONFIRMATION' | 'CONFIRMED' | 'CANCELED';
+  /**
+   * request for review sent
+   * - this is used to track if a request for review has been sent to the user after the booking
+   */
+  requestForReviewSent: boolean;
 }
 
 /**
@@ -110,20 +130,6 @@ export interface ICompanyData {
    * - this is the price that will be charged for each person in the booking
    */
   pricePerPerson: number;
-  /**
-   * maximum number of days in the future a booking can be made
-   */
-  maxDaysInFuture: number;
-  /**
-   * minimal group size for the booking
-   * - there can be more groups in one class!
-   */
-  minimalGroupSize: number;
-  /**
-   * maximum group size for the booking
-   * - there can be more groups in one class!
-   */
-  maximalGroupSize: number;
   /**
    * google coordinates for the address
    */

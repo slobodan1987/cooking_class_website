@@ -35,7 +35,10 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles/styles.scss"],
+            "styles": [
+              "src/styles/styles.scss",
+              "node_modules/flatpickr/dist/flatpickr.min.css"
+            ],
             "scripts": []
           },
           "configurations": {
