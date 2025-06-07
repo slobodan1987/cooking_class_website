@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="title" datatype="html">
+        <source>Traditional Plitvice Lakes Cooking Class</source>
+        <target>Traditional Plitvice Lakes Cooking Class</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="description1" datatype="html">
+        <source> Dobrodošli u srce Like, gdje mirisi domaće kuhinje bude sjećanja, a okusi pričaju
+          priče naših baka. Naš Traditional Plitvice Lakes Cooking Class nije samo tečaj kuhanja –
+          to je doživljaj za dušu. </source>
+        <target>Willkommen im Herzen von Lika, wo der Duft hausgemachter Gerichte Erinnerungen weckt
+          und jeder Bissen eine Geschichte erzählt, die von Generation zu Generation weitergegeben
+          wurde. Unser Traditional Plitvice Lakes Cooking Class ist kein gewöhnlicher Kochkurs – es
+          ist ein Erlebnis für die Seele.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">37,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="description2" datatype="html">
+        <source> U društvu naše obitelji, u toplini ličkog doma, naučit ćete pripremati autentična
+          plitvička i lička jela po starinskim receptima koji se prenose generacijama. Ali ne
+          brinite – ovdje se ne broje samo grami i minute. Ovdje se broje osmijesi, mirisi svježeg
+          bilja, zvuk pucanja vatre i topli razgovori uz rakijicu. </source>
+        <target>Gemeinsam mit unserer Familie, in der gemütlichen Atmosphäre unseres traditionellen
+          Hauses, lernen Sie, echte Gerichte aus der Region Plitvice und Lika nach alten Rezepten
+          zuzubereiten. Aber keine Sorge – hier geht es nicht um Gramm und Minuten. Hier zählen
+          Lachen, frische Kräuter, das Knistern des Feuers und herzliche Gespräche bei einem
+          Gläschen hausgemachtem Rakija.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">42,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="description3" datatype="html">
+        <source> Zajedno ćemo mijesiti, sjeckati, kuhati i – najvažnije – smijati se. U svako jelo
+          unosimo dašak prošlih vremena i ljubavi prema kraju iz kojeg dolazimo. A dok kuhate s
+          nama, postajete dio te priče. </source>
+        <target>Wir kneten, schneiden, rühren – und vor allem genießen wir. Jedes Gericht trägt ein
+          Stück Vergangenheit in sich und unsere Liebe zu diesem Land. Und während Sie mit uns
+          kochen, werden Sie Teil dieser Geschichte.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">49,51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="expected" datatype="html">
+        <source>Što vas očekuje?</source>
+        <target>Was erwartet Sie?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">66,68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bullet1" datatype="html">
+        <source>Edukacija i priprema tradicionalnih jela uz stručne i srdačne domaćine </source>
+        <target>Kochkurs und Zubereitung traditioneller Gerichte mit herzlichen, ortskundigen
+          Gastgebern</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">73,75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bullet2" datatype="html">
+        <source>Korištenje lokalnih, svježih sastojaka – iz vrta, s tržnice ili iz prirode </source>
+        <target>Frische, saisonale Zutaten direkt aus dem Garten, vom Markt oder aus der Natur</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">80,82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bullet3" datatype="html">
+        <source>Nezaboravno druženje u rustikalnom ambijentu</source>
+        <target>Eine entspannte, rustikale Atmosphäre</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">87,88</context>
+        </context-group>
+        <note priority="1" from="description">bullet3</note>
+      </trans-unit>
+      <trans-unit id="bullet4" datatype="html">
+        <source>Kušanje vlastitih kulinarskih remek-djela uz domaće vino i rakiju</source>
+        <target>Gemeinsames Genießen der selbst zubereiteten Speisen mit regionalem Wein und
+          hausgemachtem Schnaps</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">93,94</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bullet5" datatype="html">
+        <source>Trenuci koje ćete ponijeti kući – ne u torbi, nego u srcu</source>
+        <target>Erinnerungen, die Sie nicht im Koffer, sondern im Herzen mit nach Hause nehmen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">100,101</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="endingWord" datatype="html">
+        <source> Ovo nije samo kuhanje – ovo je spajanje s kulturom, s ljudima i s prirodom
+          Plitvičkih jezera. Ako tražite nešto istinski autentično, daleko od turističke vreve,
+          dođite da zajedno zapalimo vatru, razvaljamo tijesto i zapečemo uspomene koje će trajati
+          zauvijek. </source>
+        <target>Das ist mehr als nur Kochen – es ist eine Verbindung zur Kultur, zu den Menschen und
+          zur Seele der Plitvicer Seen. Wenn Sie etwas wirklich Authentisches suchen, fernab vom
+          Massentourismus, dann kommen Sie, entfachen Sie das Feuer, rollen Sie den Teig aus und
+          schaffen Sie Erinnerungen, die ein Leben lang bleiben.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">109,112</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reserveWord" datatype="html">
+        <source> Rezervirajte svoje mjesto za stolom – obitelj vas čeka! </source>
+        <target>Reservieren Sie Ihren Platz am Tisch – unsere Familie freut sich auf Sie!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">119,120</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reservationsSoon" datatype="html">
+        <source>Rezerviranje putem stranice uskoro će biti omogućeno!</source>
+        <target>Die Buchung über die Website wird in Kürze verfügbar sein!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">128,130</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contactUs" datatype="html">
+        <source>Do tada nas za rezervacije kontaktirajte putem telefona ili e-maila navedenih na
+          stranici. Hvala na strpljenju!</source>
+        <target>Bis dahin kontaktieren Sie uns bitte für Reservierungen telefonisch oder per E-Mail,
+          wie auf der Website angegeben. Vielen Dank für Ihre Geduld!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">132,134</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="timeLabel" datatype="html">
+        <source>Vrijeme održavanja:</source>
+        <target>Veranstaltungszeit:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/info-section/info-section.component.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="addressLabel" datatype="html">
+        <source>Adresa:</source>
+        <target>Adresse:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/info-section/info-section.component.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+        <note priority="1" from="description">addressLabel</note>
+      </trans-unit>
+      <trans-unit id="phoneLabel" datatype="html">
+        <source>Telefon:</source>
+        <target>Telefon:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/info-section/info-section.component.html</context>
+          <context context-type="linenumber">23,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="emailLabel" datatype="html">
+        <source>E-mail:</source>
+        <target>E-Mail:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/info-section/info-section.component.html</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -2,28 +2,33 @@
   <div>
     <p class="icon-outer-container info-row">
       <i class="ph ph-clock icon"></i
-      ><strong><span class="info-label">Vrijeme održavanja:</span></strong
+      ><strong
+        ><span class="info-label" i18n="@@timeLabel"
+          >Vrijeme održavanja:</span
+        ></strong
       >{{ startTime }} - {{ endTime }}
     </p>
   </div>
   <div>
     <p class="icon-outer-container info-row">
       <i class="ph ph-map-pin icon"></i
-      ><strong class="info-label">Adresa:</strong>
+      ><strong class="info-label" i18n="@@addressLabel">Adresa:</strong>
       {{ address }}
     </p>
   </div>
   <div>
     <p class="icon-outer-container info-row">
       <i class="ph ph-phone icon"></i
-      ><strong href="tel:+385919146693" class="info-label">Telefon:</strong>
+      ><strong href="tel:+385919146693" class="info-label" i18n="@@phoneLabel"
+        >Telefon:</strong
+      >
       {{ companyPhone }}
     </p>
   </div>
   <div>
     <p class="icon-outer-container info-row">
       <i class="ph ph-envelope icon"></i>
-      <strong class="info-label">E-mail:</strong>
+      <strong class="info-label" i18n="@@emailLabel">E-mail:</strong>
       <span href="mailto:cooking.class.plitvice@gmail.com">{{
         companyMail
       }}</span>

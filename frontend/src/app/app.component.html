@@ -15,8 +15,6 @@
             justify-content: space-between;
           "
         >
-          <!-- language-switcher -->
-          <app-language-switcher></app-language-switcher>
           <div>
             <img
               class="logo"
@@ -24,28 +22,30 @@
               alt="Traditional Plitvice Lakes Cooking Class Logo"
             />
           </div>
+          <!-- language-switcher -->
+          <app-language-switcher></app-language-switcher>
         </div>
         <!-- title -->
         <div class="div-title">
-          <h1>Traditional Plitvice Lakes Cooking Class</h1>
+          <h1 i18n="@@title">Traditional Plitvice Lakes Cooking Class</h1>
         </div>
 
         <!-- description -->
         <div class="description">
           <div>
-            <p>
+            <p i18n="@@description1">
               Dobrodošli u srce Like, gdje mirisi domaće kuhinje bude sjećanja,
               a okusi pričaju priče naših baka. Naš Traditional Plitvice Lakes
               Cooking Class nije samo tečaj kuhanja – to je doživljaj za dušu.
             </p>
-            <p>
+            <p i18n="@@description2">
               U društvu naše obitelji, u toplini ličkog doma, naučit ćete
               pripremati autentična plitvička i lička jela po starinskim
               receptima koji se prenose generacijama. Ali ne brinite – ovdje se
               ne broje samo grami i minute. Ovdje se broje osmijesi, mirisi
               svježeg bilja, zvuk pucanja vatre i topli razgovori uz rakijicu.
             </p>
-            <p>
+            <p i18n="@@description3">
               Zajedno ćemo mijesiti, sjeckati, kuhati i – najvažnije – smijati
               se. U svako jelo unosimo dašak prošlih vremena i ljubavi prema
               kraju iz kojeg dolazimo. A dok kuhate s nama, postajete dio te
@@ -63,36 +63,49 @@
         <!-- bullets (description) -->
         <div>
           <div class="div-title">
-            <h2>Što vas očekuje?</h2>
+            <h2 i18n="@@expected">Što vas očekuje?</h2>
           </div>
 
           <div>
             <p class="bullet-container">
-              <i class="ph ph-cooking-pot icon"></i>Edukacija i priprema
-              tradicionalnih jela uz stručne i srdačne domaćine
+              <i class="ph ph-cooking-pot icon"></i
+              ><span i18n="@@bullet1"
+                >Edukacija i priprema tradicionalnih jela uz stručne i srdačne
+                domaćine
+              </span>
             </p>
             <p class="bullet-container">
-              <i class="ph ph-leaf icon"></i>Korištenje lokalnih, svježih
-              sastojaka – iz vrta, s tržnice ili iz prirode
+              <i class="ph ph-leaf icon"></i
+              ><span i18n="@@bullet2"
+                >Korištenje lokalnih, svježih sastojaka – iz vrta, s tržnice ili
+                iz prirode
+              </span>
             </p>
             <p class="bullet-container">
-              <i class="ph ph-house icon"></i>Nezaboravno druženje u rustikalnom
-              ambijentu
+              <i class="ph ph-house icon"></i
+              ><span i18n="@@bullet3"
+                >Nezaboravno druženje u rustikalnom ambijentu</span
+              >
             </p>
             <p class="bullet-container">
-              <i class="ph ph-wine icon"></i>Kušanje vlastitih kulinarskih
-              remek-djela uz domaće vino i rakiju
+              <i class="ph ph-wine icon"></i
+              ><span i18n="@@bullet4"
+                >Kušanje vlastitih kulinarskih remek-djela uz domaće vino i
+                rakiju</span
+              >
             </p>
             <p class="bullet-container">
-              <i class="ph ph-heart icon"></i>Trenuci koje ćete ponijeti kući –
-              ne u torbi, nego u srcu
+              <i class="ph ph-heart icon"></i
+              ><span i18n="@@bullet5"
+                >Trenuci koje ćete ponijeti kući – ne u torbi, nego u srcu</span
+              >
             </p>
           </div>
         </div>
 
         <!-- description ending -->
         <div>
-          <div>
+          <div i18n="@@endingWord">
             Ovo nije samo kuhanje – ovo je spajanje s kulturom, s ljudima i s
             prirodom Plitvičkih jezera. Ako tražite nešto istinski autentično,
             daleko od turističke vreve, dođite da zajedno zapalimo vatru,
@@ -102,22 +115,23 @@
 
         <!-- final word -->
         <div class="div-title">
-          <h2>Rezervirajte svoje mjesto za stolom – obitelj vas čeka!</h2>
+          <h2 i18n="@@reserveWord">
+            Rezervirajte svoje mjesto za stolom – obitelj vas čeka!
+          </h2>
         </div>
       </div>
 
-      <!-- middle part -->
-      <div class="main-content">
-        <!-- booking form & info column (left part) -->
-        <div class="custom-column">
-          <!-- booking form -->
-          <app-booking-form [beState]="beState"></app-booking-form>
-        </div>
-
-        <!-- lower part (recensions) -->
-        <div class="custom-column">
-          <app-review-list></app-review-list>
-        </div>
+      <div>
+        <p class="bullet-container">
+          <i class="ph ph-clock icon"></i>
+          <strong i18n="@@reservationsSoon"
+            >Rezerviranje putem stranice uskoro će biti omogućeno!</strong
+          >
+        </p>
+        <span i18n="@@contactUs"
+          >Do tada nas za rezervacije kontaktirajte putem telefona ili e-maila
+          navedenih na stranici. Hvala na strpljenju!</span
+        >
       </div>
 
       <!-- info -->
