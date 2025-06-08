@@ -29,30 +29,106 @@ export class LanguageSwitcherComponent implements OnInit {
   });
 
   ngOnInit(): void {
-    const currentPath = this.location.path() || '/';
-
-    // 1. Ako postoji localStorage — koristi to
+    const currentPath = this.location.path();
+    const codeDirectlyFromPath = currentPath.split('/')?.[1];
     const saved = window.localStorage.getItem('selectedLanguage');
-    if (saved) {
-      this.form.controls['language'].setValue(
-        saved as 'hr' | 'en-US' | 'de' | 'it' | 'fr' | 'es' | 'cs' | null
-      );
-      if (currentPath !== `/index-${saved}.html`) {
-        this.setLanguage(saved);
-      }
-      return;
+
+    let finalCode = codeDirectlyFromPath ?? saved;
+    finalCode = finalCode?.trim();
+
+    if (
+      !finalCode ||
+      finalCode === '' ||
+      finalCode === 'index.html' ||
+      finalCode === 'index-hr.html' ||
+      finalCode === 'index-Hr.html' ||
+      finalCode === 'index-HR.html' ||
+      finalCode === 'HR' ||
+      finalCode === 'Hr' ||
+      finalCode === 'hr'
+    ) {
+      // 2. Ako nema localStorage, koristi defaultni jezik
+      finalCode = 'hr';
     }
 
-    // 2. Ako nema localStorage — probaj izvući jezik iz URL-a
-    const match =
-      currentPath.match(/^\/([a-z-]+)$/) || // npr. /fr
-      currentPath.match(/index-([a-z-]+)\.html/); // npr. index-fr.html
+    if (
+      finalCode === 'index-de.html' ||
+      finalCode === 'index-De.html' ||
+      finalCode === 'index-DE.html' ||
+      finalCode === 'DE' ||
+      finalCode === 'De' ||
+      finalCode === 'de'
+    ) {
+      // 2. Ako nema localStorage, koristi defaultni jezik
+      finalCode = 'de';
+    }
 
-    const urlLang = match?.[1];
+    if (
+      finalCode === 'index-en.html' ||
+      finalCode === 'index-En.html' ||
+      finalCode === 'index-EN.html' ||
+      finalCode === 'EN' ||
+      finalCode === 'En' ||
+      finalCode === 'en' ||
+      finalCode === 'index-en-us.html' ||
+      finalCode === 'index-En-Us.html' ||
+      finalCode === 'index-EN-US.html' ||
+      finalCode === 'index-en-US.html' ||
+      finalCode === 'EN-US' ||
+      finalCode === 'En-Us' ||
+      finalCode === 'en-US' ||
+      finalCode === 'en-us'
+    ) {
+      // 2. Ako nema localStorage, koristi defaultni jezik
+      finalCode = 'en-US';
+    }
 
-    this.form.controls['language'].setValue(urlLang as any);
-    if (currentPath !== `/index-${urlLang}.html`) {
-      this.setLanguage(urlLang);
+    if (
+      finalCode === 'index-cs.html' ||
+      finalCode === 'index-Cs.html' ||
+      finalCode === 'index-CS.html' ||
+      finalCode === 'CS' ||
+      finalCode === 'Cs' ||
+      finalCode === 'cs'
+    ) {
+      // 2. Ako nema localStorage, koristi defaultni jezik
+      finalCode = 'cs';
+    }
+
+    if (
+      finalCode === 'index-it.html' ||
+      finalCode === 'index-It.html' ||
+      finalCode === 'index-IT.html' ||
+      finalCode === 'IT' ||
+      finalCode === 'It' ||
+      finalCode === 'it'
+    ) {
+      // 2. Ako nema localStorage, koristi defaultni jezik
+      finalCode = 'it';
+    }
+
+    if (
+      finalCode === 'index-es.html' ||
+      finalCode === 'index-Es.html' ||
+      finalCode === 'index-ES.html' ||
+      finalCode === 'ES' ||
+      finalCode === 'Es' ||
+      finalCode === 'es'
+    ) {
+      // 2. Ako nema localStorage, koristi defaultni jezik
+      finalCode = 'es';
+    }
+
+    if (
+      finalCode === 'index-fr.html' ||
+      finalCode === 'index-Fr.html' ||
+      finalCode === 'index-FR.html' ||
+      finalCode === 'FR' ||
+      finalCode === 'Fr' ||
+      finalCode === 'fr'
+    ) {
+      // 2. Ako nema localStorage, koristi defaultni jezik
+      finalCode = 'fr';
     }
   }
 
@@ -60,42 +136,36 @@ export class LanguageSwitcherComponent implements OnInit {
     const code = event.target
       ? (event.target as HTMLSelectElement).value
       : null;
-    this.setLanguage(code);
+    const codeNormalized = code?.trim();
+    this.setLanguage(codeNormalized);
   }
   setLanguage(code: any): void {
-    if (!code) {
-      return;
+    let newPath: string = '/index-hr.html';
+    if (code === 'hr') {
+      newPath = '/index-hr.html';
     }
-
-    const normalizedCode = code.trim();
-    const currentPath = this.location.path() || '/';
-
-    // Ako si već na index-<code>.html, ne radi ništa
-    if (currentPath === `/index-${normalizedCode}.html`) {
-      return;
+    if (code === 'de') {
+      newPath = '/index-de.html';
     }
-
-    window.localStorage.setItem('selectedLanguage', normalizedCode);
-
-    let newPath: string;
-
-    if (
-      currentPath === '/' ||
-      currentPath === '/index.html' ||
-      /^\/[a-z-]+$/.test(currentPath)
-    ) {
-      newPath = `/index-${normalizedCode}.html`;
-    } else if (/index-[a-z-]+\.html/.test(currentPath)) {
-      newPath = currentPath.replace(
-        /index-[a-z-]+\.html/,
-        `index-${normalizedCode}.html`
-      );
-    } else {
-      newPath = `/index-${normalizedCode}.html`;
+    if (code === 'es') {
+      newPath = '/index-es.html';
+    }
+    if (code === 'fr') {
+      newPath = '/index-fr.html';
+    }
+    if (code === 'it') {
+      newPath = '/index-it.html';
+    }
+    if (code === 'cs') {
+      newPath = '/index-cs.html';
+    }
+    if (code === 'en-US') {
+      newPath = '/index-en-US.html';
     }
 
     // Samo ako nismo već na toj stranici
     if (window.location.pathname !== newPath) {
+      window.localStorage.setItem('selectedLanguage', code);
       window.location.href = newPath;
     }
   }
