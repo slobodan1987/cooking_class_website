@@ -30,105 +30,119 @@ export class LanguageSwitcherComponent implements OnInit {
 
   ngOnInit(): void {
     const currentPath = this.location.path();
-    const codeDirectlyFromPath = currentPath.split('/')?.[1];
-    const saved = window.localStorage.getItem('selectedLanguage');
 
-    let finalCode = codeDirectlyFromPath ?? saved;
-    finalCode = finalCode?.trim();
+    if (currentPath === '' || currentPath === '/') {
+      const saved = window.localStorage.getItem('selectedLanguage');
+      if (saved) {
+        // Ako postoji spremljeni jezik, koristi ga
+        this.setLanguage(saved);
+      } else {
+        // Ako nema spremljenog jezika, koristi defaultni jezik
+        this.setLanguage('hr');
+      }
+    } else {
+      const codeDirectlyFromPath = currentPath.split('/')?.[1];
 
-    if (
-      !finalCode ||
-      finalCode === '' ||
-      finalCode === 'index.html' ||
-      finalCode === 'index-hr.html' ||
-      finalCode === 'index-Hr.html' ||
-      finalCode === 'index-HR.html' ||
-      finalCode === 'HR' ||
-      finalCode === 'Hr' ||
-      finalCode === 'hr'
-    ) {
-      // 2. Ako nema localStorage, koristi defaultni jezik
-      finalCode = 'hr';
-    }
+      let codeDirectlyFromPathTrimmed = codeDirectlyFromPath?.trim();
+      const saved = window.localStorage.getItem('selectedLanguage');
 
-    if (
-      finalCode === 'index-de.html' ||
-      finalCode === 'index-De.html' ||
-      finalCode === 'index-DE.html' ||
-      finalCode === 'DE' ||
-      finalCode === 'De' ||
-      finalCode === 'de'
-    ) {
-      // 2. Ako nema localStorage, koristi defaultni jezik
-      finalCode = 'de';
-    }
+      if (
+        !codeDirectlyFromPathTrimmed ||
+        codeDirectlyFromPathTrimmed === '' ||
+        codeDirectlyFromPathTrimmed === 'index.html' ||
+        codeDirectlyFromPathTrimmed === 'index-hr.html' ||
+        codeDirectlyFromPathTrimmed === 'index-Hr.html' ||
+        codeDirectlyFromPathTrimmed === 'index-HR.html' ||
+        codeDirectlyFromPathTrimmed === 'HR' ||
+        codeDirectlyFromPathTrimmed === 'Hr' ||
+        codeDirectlyFromPathTrimmed === 'hr'
+      ) {
+        // 2. Ako nema localStorage, koristi defaultni jezik
+        codeDirectlyFromPathTrimmed = 'hr';
+      }
 
-    if (
-      finalCode === 'index-en.html' ||
-      finalCode === 'index-En.html' ||
-      finalCode === 'index-EN.html' ||
-      finalCode === 'EN' ||
-      finalCode === 'En' ||
-      finalCode === 'en' ||
-      finalCode === 'index-en-us.html' ||
-      finalCode === 'index-En-Us.html' ||
-      finalCode === 'index-EN-US.html' ||
-      finalCode === 'index-en-US.html' ||
-      finalCode === 'EN-US' ||
-      finalCode === 'En-Us' ||
-      finalCode === 'en-US' ||
-      finalCode === 'en-us'
-    ) {
-      // 2. Ako nema localStorage, koristi defaultni jezik
-      finalCode = 'en-US';
-    }
+      if (
+        codeDirectlyFromPathTrimmed === 'index-de.html' ||
+        codeDirectlyFromPathTrimmed === 'index-De.html' ||
+        codeDirectlyFromPathTrimmed === 'index-DE.html' ||
+        codeDirectlyFromPathTrimmed === 'DE' ||
+        codeDirectlyFromPathTrimmed === 'De' ||
+        codeDirectlyFromPathTrimmed === 'de'
+      ) {
+        // 2. Ako nema localStorage, koristi defaultni jezik
+        codeDirectlyFromPathTrimmed = 'de';
+      }
 
-    if (
-      finalCode === 'index-cs.html' ||
-      finalCode === 'index-Cs.html' ||
-      finalCode === 'index-CS.html' ||
-      finalCode === 'CS' ||
-      finalCode === 'Cs' ||
-      finalCode === 'cs'
-    ) {
-      // 2. Ako nema localStorage, koristi defaultni jezik
-      finalCode = 'cs';
-    }
+      if (
+        codeDirectlyFromPathTrimmed === 'index-en.html' ||
+        codeDirectlyFromPathTrimmed === 'index-En.html' ||
+        codeDirectlyFromPathTrimmed === 'index-EN.html' ||
+        codeDirectlyFromPathTrimmed === 'EN' ||
+        codeDirectlyFromPathTrimmed === 'En' ||
+        codeDirectlyFromPathTrimmed === 'en' ||
+        codeDirectlyFromPathTrimmed === 'index-en-us.html' ||
+        codeDirectlyFromPathTrimmed === 'index-En-Us.html' ||
+        codeDirectlyFromPathTrimmed === 'index-EN-US.html' ||
+        codeDirectlyFromPathTrimmed === 'index-en-US.html' ||
+        codeDirectlyFromPathTrimmed === 'EN-US' ||
+        codeDirectlyFromPathTrimmed === 'En-Us' ||
+        codeDirectlyFromPathTrimmed === 'en-US' ||
+        codeDirectlyFromPathTrimmed === 'en-us'
+      ) {
+        // 2. Ako nema localStorage, koristi defaultni jezik
+        codeDirectlyFromPathTrimmed = 'en-US';
+      }
 
-    if (
-      finalCode === 'index-it.html' ||
-      finalCode === 'index-It.html' ||
-      finalCode === 'index-IT.html' ||
-      finalCode === 'IT' ||
-      finalCode === 'It' ||
-      finalCode === 'it'
-    ) {
-      // 2. Ako nema localStorage, koristi defaultni jezik
-      finalCode = 'it';
-    }
+      if (
+        codeDirectlyFromPathTrimmed === 'index-cs.html' ||
+        codeDirectlyFromPathTrimmed === 'index-Cs.html' ||
+        codeDirectlyFromPathTrimmed === 'index-CS.html' ||
+        codeDirectlyFromPathTrimmed === 'CS' ||
+        codeDirectlyFromPathTrimmed === 'Cs' ||
+        codeDirectlyFromPathTrimmed === 'cs'
+      ) {
+        // 2. Ako nema localStorage, koristi defaultni jezik
+        codeDirectlyFromPathTrimmed = 'cs';
+      }
 
-    if (
-      finalCode === 'index-es.html' ||
-      finalCode === 'index-Es.html' ||
-      finalCode === 'index-ES.html' ||
-      finalCode === 'ES' ||
-      finalCode === 'Es' ||
-      finalCode === 'es'
-    ) {
-      // 2. Ako nema localStorage, koristi defaultni jezik
-      finalCode = 'es';
-    }
+      if (
+        codeDirectlyFromPathTrimmed === 'index-it.html' ||
+        codeDirectlyFromPathTrimmed === 'index-It.html' ||
+        codeDirectlyFromPathTrimmed === 'index-IT.html' ||
+        codeDirectlyFromPathTrimmed === 'IT' ||
+        codeDirectlyFromPathTrimmed === 'It' ||
+        codeDirectlyFromPathTrimmed === 'it'
+      ) {
+        // 2. Ako nema localStorage, koristi defaultni jezik
+        codeDirectlyFromPathTrimmed = 'it';
+      }
 
-    if (
-      finalCode === 'index-fr.html' ||
-      finalCode === 'index-Fr.html' ||
-      finalCode === 'index-FR.html' ||
-      finalCode === 'FR' ||
-      finalCode === 'Fr' ||
-      finalCode === 'fr'
-    ) {
-      // 2. Ako nema localStorage, koristi defaultni jezik
-      finalCode = 'fr';
+      if (
+        codeDirectlyFromPathTrimmed === 'index-es.html' ||
+        codeDirectlyFromPathTrimmed === 'index-Es.html' ||
+        codeDirectlyFromPathTrimmed === 'index-ES.html' ||
+        codeDirectlyFromPathTrimmed === 'ES' ||
+        codeDirectlyFromPathTrimmed === 'Es' ||
+        codeDirectlyFromPathTrimmed === 'es'
+      ) {
+        // 2. Ako nema localStorage, koristi defaultni jezik
+        codeDirectlyFromPathTrimmed = 'es';
+      }
+
+      if (
+        codeDirectlyFromPathTrimmed === 'index-fr.html' ||
+        codeDirectlyFromPathTrimmed === 'index-Fr.html' ||
+        codeDirectlyFromPathTrimmed === 'index-FR.html' ||
+        codeDirectlyFromPathTrimmed === 'FR' ||
+        codeDirectlyFromPathTrimmed === 'Fr' ||
+        codeDirectlyFromPathTrimmed === 'fr'
+      ) {
+        // 2. Ako nema localStorage, koristi defaultni jezik
+        codeDirectlyFromPathTrimmed = 'fr';
+      }
+
+      codeDirectlyFromPathTrimmed = saved ?? 'hr';
+      this.setLanguage(codeDirectlyFromPathTrimmed);
     }
   }
 
@@ -165,6 +179,7 @@ export class LanguageSwitcherComponent implements OnInit {
 
     // Samo ako nismo već na toj stranici
     if (window.location.pathname !== newPath) {
+      this.form.setValue(code);
       window.localStorage.setItem('selectedLanguage', code);
       window.location.href = newPath;
     }
