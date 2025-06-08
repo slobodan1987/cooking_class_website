@@ -67,25 +67,32 @@
           },
           "configurations": {
             "en-EN": {
-              "localize": ["en-US"]
+              "localize": ["en-US"],
+              "baseHref": "/en-EN/"
             },
             "hr": {
-              "localize": ["hr"]
+              "localize": ["hr"],
+              "baseHref": "/hr/"
             },
             "de": {
-              "localize": ["de"]
+              "localize": ["de"],
+              "baseHref": "/de/"
             },
             "cs": {
-              "localize": ["cs"]
+              "localize": ["cs"],
+              "baseHref": "/cs/"
             },
             "es": {
-              "localize": ["es"]
+              "localize": ["es"],
+              "baseHref": "/es/"
             },
             "fr": {
-              "localize": ["fr"]
+              "localize": ["fr"],
+              "baseHref": "/fr/"
             },
             "it": {
-              "localize": ["it"]
+              "localize": ["it"],
+              "baseHref": "/it/"
             },
             "production": {
               "budgets": [
