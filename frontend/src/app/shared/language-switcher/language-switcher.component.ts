@@ -4,8 +4,6 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { FlagPipe } from '../pipes/flag.pipe';
 import { Language, LANGUAGES } from './languages';
 
-const SUPPORTED_LANGUAGES = ['hr', 'en-US', 'de', 'it', 'fr', 'es', 'cs'];
-const DEFAULT_LANGUAGE = 'hr';
 interface LanguageForm {
   language: FormControl<
     'hr' | 'en-US' | 'de' | 'it' | 'fr' | 'es' | 'cs' | null
@@ -35,8 +33,10 @@ export class LanguageSwitcherComponent implements OnInit {
 
     // 1. Ako postoji localStorage — koristi to
     const saved = window.localStorage.getItem('selectedLanguage');
-    if (saved && this.isSupported(saved)) {
-      this.form.controls['language'].setValue(saved as any);
+    if (saved) {
+      this.form.controls['language'].setValue(
+        saved as 'hr' | 'en-US' | 'de' | 'it' | 'fr' | 'es' | 'cs' | null
+      );
       if (currentPath !== `/index-${saved}.html`) {
         this.setLanguage(saved);
       }
@@ -50,11 +50,9 @@ export class LanguageSwitcherComponent implements OnInit {
 
     const urlLang = match?.[1];
 
-    const detected = this.isSupported(urlLang) ? urlLang : DEFAULT_LANGUAGE;
-
-    this.form.controls['language'].setValue(detected as any);
-    if (currentPath !== `/index-${detected}.html`) {
-      this.setLanguage(detected);
+    this.form.controls['language'].setValue(urlLang as any);
+    if (currentPath !== `/index-${urlLang}.html`) {
+      this.setLanguage(urlLang);
     }
   }
 
@@ -100,8 +98,5 @@ export class LanguageSwitcherComponent implements OnInit {
     if (window.location.pathname !== newPath) {
       window.location.href = newPath;
     }
-  }
-  isSupported(code: any): boolean {
-    return !!code && SUPPORTED_LANGUAGES.includes(code);
   }
 }
