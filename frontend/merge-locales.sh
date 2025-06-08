@@ -17,18 +17,13 @@ echo "✅ HR prebacen u dist/cooking_class_website/merged"
 
 # Ostali jezici u podfoldere
 for lang in "${OTHER_LANGS[@]}"; do
-  mkdir -p dist/cooking_class_website/merged/$lang
-  cp -r dist/cooking_class_website/browser/$lang/* dist/cooking_class_website/merged/$lang/
+cp dist/cooking_class_website/browser/$lang/index.html dist/cooking_class_website/merged/${lang}.html
 done
 echo "✅ svi jezici prebaceni u dist/cooking_class_website/merged"
 
 # Očisti originalne foldere
 rm -rf dist/cooking_class_website/browser
 echo "✅ originalni folderi obrisani"
-
-# Dodaj 404.html u root (SPA fallback za više jezika)
-cp dist/cooking_class_website/merged/assets/404.html dist/cooking_class_website/merged/
-echo "✅ 404.html prebacen iz assets u dist/cooking_class_website/merged"
 
 echo "✅ dist/cooking_class_website/merged spreman za deploy:"
 echo " - /       → $DEFAULT_LANG"
