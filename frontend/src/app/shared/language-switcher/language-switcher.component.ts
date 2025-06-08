@@ -52,12 +52,33 @@ export class LanguageSwitcherComponent implements OnInit {
     if (!code) {
       return;
     }
-    window.localStorage.setItem('selectedLanguage', code); // Sačuvaj jezik
-    const path = this.location.path();
-    const newPath = path.replace(
-      /index-[a-z-]+\.html/,
-      'index-' + code + '.html'
-    );
+
+    window.localStorage.setItem('selectedLanguage', code);
+
+    const currentPath = this.location.path() || '/';
+
+    let newPath: string;
+
+    // Ako je root, ili index.html, ili /hr, idi direktno na index-{code}.html
+    if (
+      currentPath === '/' ||
+      currentPath === '/index.html' ||
+      /^\/[a-z-]+$/.test(currentPath) // npr. /de, /fr
+    ) {
+      newPath = `/index-${code}.html`;
+    }
+    // Ako već jeste index-xx.html, zameni samo kod
+    else if (/index-[a-z-]+\.html/.test(currentPath)) {
+      newPath = currentPath.replace(
+        /index-[a-z-]+\.html/,
+        `index-${code}.html`
+      );
+    }
+    // Ako je neka čudna ruta (/nepoznato), fallback
+    else {
+      newPath = `/index-${code}.html`;
+    }
+
     window.location.href = newPath;
   }
 }
