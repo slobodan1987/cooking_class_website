@@ -10,6 +10,17 @@
           "style": "scss"
         }
       },
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "de": "src/locale/messages.de.xlf",
+          "it": "src/locale/messages.it.xlf",
+          "fr": "src/locale/messages.fr.xlf",
+          "cs": "src/locale/messages.cs.xlf",
+          "hr": "src/locale/messages.hr.xlf",
+          "es": "src/locale/messages.es.xlf"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -20,6 +31,7 @@
             "stylePreprocessorOptions": {
               "includePaths": ["src"]
             },
+            "localize": true,
             "outputPath": "dist/cooking_class_website",
             "deployUrl": "/",
             "baseHref": "/",
@@ -42,6 +54,34 @@
             "scripts": []
           },
           "configurations": {
+            "en-EN": {
+              "localize": ["en-US"],
+              "outputPath": "/en-US"
+            },
+            "hr": {
+              "localize": ["hr"],
+              "outputPath": "dist/cooking_class_website/hr"
+            },
+            "de": {
+              "localize": ["de"],
+              "outputPath": "dist/cooking_class_website/de"
+            },
+            "cs": {
+              "localize": ["cs"],
+              "outputPath": "dist/cooking_class_website/cs"
+            },
+            "es": {
+              "localize": ["es"],
+              "outputPath": "dist/cooking_class_website/es"
+            },
+            "fr": {
+              "localize": ["fr"],
+              "outputPath": "dist/cooking_class_website/fr"
+            },
+            "it": {
+              "localize": ["it"],
+              "outputPath": "dist/cooking_class_website/it"
+            },
             "production": {
               "budgets": [
                 {
@@ -55,7 +95,13 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "localize": true,
+              "outputPath": "dist/cooking_class_website",
+              "optimization": true,
+              "sourceMap": false,
+              "extractLicenses": true,
+              "namedChunks": false
             },
             "development": {
               "optimization": false,
@@ -73,8 +119,30 @@
             },
             "development": {
               "buildTarget": "cooking-class-website:build:development"
+            },
+            "hr": {
+              "buildTarget": "cooking-class-website:build:hr"
+            },
+            "de": {
+              "buildTarget": "cooking-class-website:build:de"
+            },
+            "it": {
+              "buildTarget": "cooking-class-website:build:it"
+            },
+            "fr": {
+              "buildTarget": "cooking-class-website:build:fr"
+            },
+            "es": {
+              "buildTarget": "cooking-class-website:build:es"
+            },
+            "cs": {
+              "buildTarget": "cooking-class-website:build:cs"
+            },
+            "en": {
+              "buildTarget": "cooking-class-website:build:en-EN"
             }
           },
+
           "defaultConfiguration": "development"
         },
         "extract-i18n": {

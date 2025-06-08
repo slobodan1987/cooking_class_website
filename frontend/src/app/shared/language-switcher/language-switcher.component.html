@@ -1,5 +1,9 @@
 <div [formGroup]="form" class="language-switcher-row">
-  <select class="input-field language-selection-dropdown" formControlName="language">
+  <select
+    (change)="switchLanguage($event)"
+    class="input-field language-selection-dropdown"
+    formControlName="language"
+  >
     <option *ngFor="let lang of languages" [value]="lang.code">
       {{ lang.name }}
     </option>
