@@ -64,7 +64,7 @@ export class LanguageSwitcherComponent implements OnInit {
       : null;
     this.setLanguage(code);
   }
-  setLanguage(code: string | null): void {
+  setLanguage(code: any): void {
     if (!code) {
       return;
     }
@@ -101,7 +101,7 @@ export class LanguageSwitcherComponent implements OnInit {
       window.location.href = newPath;
     }
   }
-  isSupported(code: string | null | undefined): boolean {
+  isSupported(code: any): boolean {
     return !!code && SUPPORTED_LANGUAGES.includes(code);
   }
 }
