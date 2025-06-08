@@ -31,6 +31,30 @@ export class LanguageSwitcherComponent implements OnInit {
   ngOnInit(): void {
     // const currentPath = this.location.path();
 
+    const directPath = window.location.pathname;
+    let codeFromPath = 'hr';
+    if (directPath?.includes('index-hr.html')) {
+      codeFromPath = 'hr';
+    }
+    if (directPath?.includes('index-en-US.html')) {
+      codeFromPath = 'en-US';
+    }
+    if (directPath?.includes('index-de.html')) {
+      codeFromPath = 'de';
+    }
+    if (directPath?.includes('index-it.html')) {
+      codeFromPath = 'it';
+    }
+    if (directPath?.includes('index-fr.html')) {
+      codeFromPath = 'fr';
+    }
+    if (directPath?.includes('index-es.html')) {
+      codeFromPath = 'es';
+    }
+    if (directPath?.includes('index-cs.html')) {
+      codeFromPath = 'cs';
+    }
+
     const saved = window.localStorage.getItem('selectedLanguage') ?? 'hr';
 
     // if (
@@ -128,6 +152,8 @@ export class LanguageSwitcherComponent implements OnInit {
     //   codeDirectlyFromPathTrimmed = 'fr';
     // }
 
+    const finalCode = codeFromPath ?? saved ?? 'hr';
+
     this.form.setValue({
       language: saved as
         | 'hr'
@@ -140,7 +166,7 @@ export class LanguageSwitcherComponent implements OnInit {
         | null,
     });
 
-    this.setLanguage(saved);
+    this.setLanguage(finalCode);
   }
 
   switchLanguage(event: Event): void {
