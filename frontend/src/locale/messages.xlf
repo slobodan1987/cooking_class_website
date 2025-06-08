@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="hr" datatype="plaintext" original="ng2.template">
     <body>
@@ -10,28 +10,21 @@
         </context-group>
       </trans-unit>
       <trans-unit id="description1" datatype="html">
-        <source> Dobrodošli u srce Like, gdje mirisi domaće kuhinje bude sjećanja, a okusi pričaju
-          priče naših baka. Naš Traditional Plitvice Lakes Cooking Class nije samo tečaj kuhanja –
-          to je doživljaj za dušu. </source>
+        <source> Dobrodošli u srce Like, gdje mirisi domaće kuhinje bude sjećanja, a okusi pričaju priče naših baka. Naš Traditional Plitvice Lakes Cooking Class nije samo tečaj kuhanja – to je doživljaj za dušu. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
           <context context-type="linenumber">37,39</context>
         </context-group>
       </trans-unit>
       <trans-unit id="description2" datatype="html">
-        <source> U društvu naše obitelji, u toplini ličkog doma, naučit ćete pripremati autentična
-          plitvička i lička jela po starinskim receptima koji se prenose generacijama. Ali ne
-          brinite – ovdje se ne broje samo grami i minute. Ovdje se broje osmijesi, mirisi svježeg
-          bilja, zvuk pucanja vatre i topli razgovori uz rakijicu. </source>
+        <source> U društvu naše obitelji, u toplini ličkog doma, naučit ćete pripremati autentična plitvička i lička jela po starinskim receptima koji se prenose generacijama. Ali ne brinite – ovdje se ne broje samo grami i minute. Ovdje se broje osmijesi, mirisi svježeg bilja, zvuk pucanja vatre i topli razgovori uz rakijicu. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
           <context context-type="linenumber">42,46</context>
         </context-group>
       </trans-unit>
       <trans-unit id="description3" datatype="html">
-        <source> Zajedno ćemo mijesiti, sjeckati, kuhati i – najvažnije – smijati se. U svako jelo
-          unosimo dašak prošlih vremena i ljubavi prema kraju iz kojeg dolazimo. A dok kuhate s
-          nama, postajete dio te priče. </source>
+        <source> Zajedno ćemo mijesiti, sjeckati, kuhati i – najvažnije – smijati se. U svako jelo unosimo dašak prošlih vremena i ljubavi prema kraju iz kojeg dolazimo. A dok kuhate s nama, postajete dio te priče. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
           <context context-type="linenumber">49,51</context>
@@ -64,7 +57,6 @@
           <context context-type="sourcefile">src/app/app.component.html</context>
           <context context-type="linenumber">87,88</context>
         </context-group>
-        <note priority="1" from="description">bullet3</note>
       </trans-unit>
       <trans-unit id="bullet4" datatype="html">
         <source>Kušanje vlastitih kulinarskih remek-djela uz domaće vino i rakiju</source>
@@ -81,10 +73,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="endingWord" datatype="html">
-        <source> Ovo nije samo kuhanje – ovo je spajanje s kulturom, s ljudima i s prirodom
-          Plitvičkih jezera. Ako tražite nešto istinski autentično, daleko od turističke vreve,
-          dođite da zajedno zapalimo vatru, razvaljamo tijesto i zapečemo uspomene koje će trajati
-          zauvijek. </source>
+        <source> Ovo nije samo kuhanje – ovo je spajanje s kulturom, s ljudima i s prirodom Plitvičkih jezera. Ako tražite nešto istinski autentično, daleko od turističke vreve, dođite da zajedno zapalimo vatru, razvaljamo tijesto i zapečemo uspomene koje će trajati zauvijek. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
           <context context-type="linenumber">109,112</context>
@@ -105,19 +94,24 @@
         </context-group>
       </trans-unit>
       <trans-unit id="contactUs" datatype="html">
-        <source>Do tada nas za rezervacije kontaktirajte putem telefona ili e-maila navedenih na
-          stranici. Hvala na strpljenju!</source>
+        <source>Do tada nas za rezervacije kontaktirajte putem telefona ili e-maila navedenih na stranici. Hvala na strpljenju!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">132,134</context>
+          <context context-type="linenumber">134,136</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="guestsGroup" datatype="html">
+        <source>Događaju može prisustvovati od 2 do 12 osoba. Moguće je kombinirati više grupa.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">142,144</context>
         </context-group>
       </trans-unit>
       <trans-unit id="price" datatype="html">
-        <source>Plaćanje se vrši nakon događaja – gotovinom, karticom ili virmanom. Cijena po osobi
-          iznosi 80 EUR.</source>
+        <source>Plaćanje se vrši nakon događaja – gotovinom, karticom ili virmanom. Cijena po osobi iznosi 80 EUR.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">138,139</context>
+          <context context-type="linenumber">149,150</context>
         </context-group>
       </trans-unit>
       <trans-unit id="timeLabel" datatype="html">
@@ -133,7 +127,6 @@
           <context context-type="sourcefile">src/app/shared/info-section/info-section.component.html</context>
           <context context-type="linenumber">15,16</context>
         </context-group>
-        <note priority="1" from="description">addressLabel</note>
       </trans-unit>
       <trans-unit id="phoneLabel" datatype="html">
         <source>Telefon:</source>

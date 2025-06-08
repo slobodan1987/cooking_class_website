@@ -139,7 +139,15 @@
           como se indica en el sitio web. ¡Gracias por su paciencia!</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">132,134</context>
+          <context context-type="linenumber">134,136</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="guestsGroup" datatype="html">
+        <source>Događaju može prisustvovati od 2 do 12 osoba. Moguće je kombinirati više grupa.</source>
+        <target>El evento puede acoger entre 2 y 12 personas. Es posible combinar varios grupos.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">142,144</context>
         </context-group>
       </trans-unit>
       <trans-unit id="price" datatype="html">
@@ -149,7 +157,7 @@
           bancaria. El precio por persona es de 80 EUR.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">138,139</context>
+          <context context-type="linenumber">149,150</context>
         </context-group>
       </trans-unit>
       <trans-unit id="timeLabel" datatype="html">
