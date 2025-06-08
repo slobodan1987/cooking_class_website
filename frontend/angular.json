@@ -56,31 +56,38 @@
           "configurations": {
             "en-EN": {
               "localize": ["en-US"],
-              "outputPath": "dist/cooking_class_website/en-US"
+              "outputPath": "dist/cooking_class_website/en-US",
+              "baseHref": "/en-US/"
             },
             "hr": {
               "localize": ["hr"],
-              "outputPath": "dist/cooking_class_website/hr"
+              "outputPath": "dist/cooking_class_website/hr",
+              "baseHref": "/hr/"
             },
             "de": {
               "localize": ["de"],
-              "outputPath": "dist/cooking_class_website/de"
+              "outputPath": "dist/cooking_class_website/de",
+              "baseHref": "/de/"
             },
             "cs": {
               "localize": ["cs"],
-              "outputPath": "dist/cooking_class_website/cs"
+              "outputPath": "dist/cooking_class_website/cs",
+              "baseHref": "/cs/"
             },
             "es": {
               "localize": ["es"],
-              "outputPath": "dist/cooking_class_website/es"
+              "outputPath": "dist/cooking_class_website/es",
+              "baseHref": "/es/"
             },
             "fr": {
               "localize": ["fr"],
-              "outputPath": "dist/cooking_class_website/fr"
+              "outputPath": "dist/cooking_class_website/fr",
+              "baseHref": "/fr/"
             },
             "it": {
               "localize": ["it"],
-              "outputPath": "dist/cooking_class_website/it"
+              "outputPath": "dist/cooking_class_website/it",
+              "baseHref": "/it/"
             },
             "production": {
               "budgets": [
