@@ -56,7 +56,7 @@
           "configurations": {
             "en-EN": {
               "localize": ["en-US"],
-              "outputPath": "/en-US"
+              "outputPath": "dist/cooking_class_website/en-US"
             },
             "hr": {
               "localize": ["hr"],
