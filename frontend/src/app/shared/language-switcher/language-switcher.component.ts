@@ -34,9 +34,11 @@ export class LanguageSwitcherComponent implements OnInit {
       this.form.controls['language'].setValue(
         savedLanguage as 'hr' | 'en-US' | 'de' | 'it' | 'fr' | 'es' | 'cs'
       );
+      this.setLanguage(savedLanguage);
     } else {
       // Ako nema sačuvanog jezika, postavi podrazumevani jezik
       this.form.controls['language'].setValue('hr');
+      this.setLanguage('hr'); // Postavi podrazumevani jezik
     }
   }
 
@@ -44,6 +46,9 @@ export class LanguageSwitcherComponent implements OnInit {
     const code = event.target
       ? (event.target as HTMLSelectElement).value
       : null;
+    this.setLanguage(code);
+  }
+  setLanguage(code: string | null): void {
     if (!code) {
       return;
     }
