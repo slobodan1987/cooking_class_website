@@ -49,8 +49,10 @@ export class LanguageSwitcherComponent implements OnInit {
     }
     window.localStorage.setItem('selectedLanguage', code); // Sačuvaj jezik
     const path = this.location.path();
-    const newPath = `/index-${code}.html${path}`;
+    const newPath = path.replace(
+      /index-[a-z-]+\.html/,
+      'index-' + code + '.html'
+    );
     window.location.href = newPath;
-    // window.location.href = path + '/index-' + code + '.html';
   }
 }
