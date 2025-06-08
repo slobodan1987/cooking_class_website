@@ -155,7 +155,7 @@ export class LanguageSwitcherComponent implements OnInit {
     const finalCode = codeFromPath ?? saved ?? 'hr';
 
     this.form.setValue({
-      language: saved as
+      language: finalCode as
         | 'hr'
         | 'en-US'
         | 'de'
