@@ -13,12 +13,24 @@
       "i18n": {
         "sourceLocale": "en-US",
         "locales": {
-          "de": "src/locale/messages.de.xlf",
-          "it": "src/locale/messages.it.xlf",
-          "fr": "src/locale/messages.fr.xlf",
-          "cs": "src/locale/messages.cs.xlf",
-          "hr": "src/locale/messages.hr.xlf",
-          "es": "src/locale/messages.es.xlf"
+          "de": {
+            "translation": "src/locale/messages.de.xlf"
+          },
+          "it": {
+            "translation": "src/locale/messages.it.xlf"
+          },
+          "fr": {
+            "translation": "src/locale/messages.fr.xlf"
+          },
+          "cs": {
+            "translation": "src/locale/messages.cs.xlf"
+          },
+          "hr": {
+            "translation": "src/locale/messages.hr.xlf"
+          },
+          "es": {
+            "translation": "src/locale/messages.es.xlf"
+          }
         }
       },
       "root": "",
@@ -55,74 +67,25 @@
           },
           "configurations": {
             "en-EN": {
-              "localize": ["en-US"],
-              "outputPath": "dist/cooking_class_website/en-US",
-              "baseHref": "/en-US/",
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractLicenses": true,
-              "namedChunks": false
+              "localize": ["en-US"]
             },
             "hr": {
-              "localize": ["hr"],
-              "outputPath": "dist/cooking_class_website/hr",
-              "baseHref": "/hr/",
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractLicenses": true,
-              "namedChunks": false
+              "localize": ["hr"]
             },
             "de": {
-              "localize": ["de"],
-              "outputPath": "dist/cooking_class_website/de",
-              "baseHref": "/de/",
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractLicenses": true,
-              "namedChunks": false
+              "localize": ["de"]
             },
             "cs": {
-              "localize": ["cs"],
-              "outputPath": "dist/cooking_class_website/cs",
-              "baseHref": "/cs/",
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractLicenses": true,
-              "namedChunks": false
+              "localize": ["cs"]
             },
             "es": {
-              "localize": ["es"],
-              "outputPath": "dist/cooking_class_website/es",
-              "baseHref": "/es/",
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractLicenses": true,
-              "namedChunks": false
+              "localize": ["es"]
             },
             "fr": {
-              "localize": ["fr"],
-              "outputPath": "dist/cooking_class_website/fr",
-              "baseHref": "/fr/",
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractLicenses": true,
-              "namedChunks": false
+              "localize": ["fr"]
             },
             "it": {
-              "localize": ["it"],
-              "outputPath": "dist/cooking_class_website/it",
-              "baseHref": "/it/",
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractLicenses": true,
-              "namedChunks": false
+              "localize": ["it"]
             },
             "production": {
               "budgets": [
