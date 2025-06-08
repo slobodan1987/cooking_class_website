@@ -6,7 +6,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --configuration=hr",
-    "build": "ng build --configuration=production",
+    "build": "ng build --configuration=production --localize",
+    "build:all": "ng build --localize",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
