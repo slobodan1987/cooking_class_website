@@ -13,6 +13,9 @@ mkdir -p dist/cooking_class_website/merged
 # HR u root (kao default)
 cp -r dist/cooking_class_website/browser/$DEFAULT_LANG/* dist/cooking_class_website/merged/
 
+# Dodaj 404.html u root (SPA fallback za više jezika)
+cp frontend/404.html dist/cooking_class_website/merged/
+
 # Ostali jezici u podfoldere
 for lang in "${OTHER_LANGS[@]}"; do
   mkdir -p dist/cooking_class_website/merged/$lang
