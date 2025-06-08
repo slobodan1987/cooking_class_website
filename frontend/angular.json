@@ -11,13 +11,13 @@
         }
       },
       "i18n": {
-        "sourceLocale": "en-US",
+        "sourceLocale": "hr",
         "locales": {
           "de": "src/locale/messages.de.xlf",
           "it": "src/locale/messages.it.xlf",
           "fr": "src/locale/messages.fr.xlf",
           "cs": "src/locale/messages.cs.xlf",
-          "hr": "src/locale/messages.hr.xlf",
+          "en-US": "src/locale/messages.en-US.xlf",
           "es": "src/locale/messages.es.xlf"
         }
       },
