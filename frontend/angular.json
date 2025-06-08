@@ -66,9 +66,9 @@
             "scripts": []
           },
           "configurations": {
-            "en-EN": {
+            "en-US": {
               "localize": ["en-US"],
-              "baseHref": "/en-EN/"
+              "baseHref": "/en-US/"
             },
             "hr": {
               "localize": ["hr"],
@@ -151,7 +151,7 @@
               "buildTarget": "cooking-class-website:build:cs"
             },
             "en": {
-              "buildTarget": "cooking-class-website:build:en-EN"
+              "buildTarget": "cooking-class-website:build:en-US"
             }
           },
 
