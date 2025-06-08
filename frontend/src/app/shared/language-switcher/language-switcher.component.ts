@@ -30,16 +30,16 @@ export class LanguageSwitcherComponent implements OnInit {
 
   ngOnInit(): void {
     const savedLanguage = window.localStorage.getItem('selectedLanguage');
-    if (savedLanguage) {
-      this.form.controls['language'].setValue(
-        savedLanguage as 'hr' | 'en-US' | 'de' | 'it' | 'fr' | 'es' | 'cs'
-      );
-      this.setLanguage(savedLanguage);
-    } else {
-      // Ako nema sačuvanog jezika, postavi podrazumevani jezik
-      this.form.controls['language'].setValue('hr');
-      this.setLanguage('hr'); // Postavi podrazumevani jezik
+    const currentPath = this.location.path();
+
+    if (savedLanguage && currentPath === `/index-${savedLanguage}.html`) {
+      this.form.controls['language'].setValue(savedLanguage as any);
+      return; // Ne preusmeravaj, već si tu
     }
+
+    const code = savedLanguage || 'hr';
+    this.form.controls['language'].setValue(code as any);
+    this.setLanguage(code);
   }
 
   switchLanguage(event: Event): void {
@@ -53,32 +53,36 @@ export class LanguageSwitcherComponent implements OnInit {
       return;
     }
 
-    window.localStorage.setItem('selectedLanguage', code);
-
+    const normalizedCode = code.trim();
     const currentPath = this.location.path() || '/';
+
+    // Ako si već na index-<code>.html, ne radi ništa
+    if (currentPath === `/index-${normalizedCode}.html`) {
+      return;
+    }
+
+    window.localStorage.setItem('selectedLanguage', normalizedCode);
 
     let newPath: string;
 
-    // Ako je root, ili index.html, ili /hr, idi direktno na index-{code}.html
     if (
       currentPath === '/' ||
       currentPath === '/index.html' ||
-      /^\/[a-z-]+$/.test(currentPath) // npr. /de, /fr
+      /^\/[a-z-]+$/.test(currentPath)
     ) {
-      newPath = `/index-${code}.html`;
-    }
-    // Ako već jeste index-xx.html, zameni samo kod
-    else if (/index-[a-z-]+\.html/.test(currentPath)) {
+      newPath = `/index-${normalizedCode}.html`;
+    } else if (/index-[a-z-]+\.html/.test(currentPath)) {
       newPath = currentPath.replace(
         /index-[a-z-]+\.html/,
-        `index-${code}.html`
+        `index-${normalizedCode}.html`
       );
-    }
-    // Ako je neka čudna ruta (/nepoznato), fallback
-    else {
-      newPath = `/index-${code}.html`;
+    } else {
+      newPath = `/index-${normalizedCode}.html`;
     }
 
-    window.location.href = newPath;
+    // Samo ako nismo već na toj stranici
+    if (window.location.pathname !== newPath) {
+      window.location.href = newPath;
+    }
   }
 }
