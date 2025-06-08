@@ -136,6 +136,17 @@ export class LanguageSwitcherComponent implements OnInit {
       ? (event.target as HTMLSelectElement).value
       : null;
     const codeNormalized = code?.trim();
+    this.form.setValue({
+      language: code as
+        | 'hr'
+        | 'en-US'
+        | 'de'
+        | 'it'
+        | 'fr'
+        | 'es'
+        | 'cs'
+        | null,
+    });
     this.setLanguage(codeNormalized);
   }
   setLanguage(code: any): void {
@@ -165,7 +176,6 @@ export class LanguageSwitcherComponent implements OnInit {
     // // Samo ako nismo već na toj stranici
     if (window.location.pathname !== newPath) {
       window.localStorage.setItem('selectedLanguage', code);
-      this.form.setValue({ language: code });
       window.location.href = newPath;
     }
   }
