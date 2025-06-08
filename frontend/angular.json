@@ -95,7 +95,7 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all",
+              "outputHashing": "none",
               "localize": true,
               "outputPath": "dist/cooking_class_website",
               "optimization": true,
