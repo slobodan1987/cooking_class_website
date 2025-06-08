@@ -56,7 +56,7 @@
           "configurations": {
             "hr": {
               "localize": ["hr"],
-              "baseHref": "/hr/"
+              "baseHref": "/"
             },
             "en-US": {
               "localize": ["en-US"],
