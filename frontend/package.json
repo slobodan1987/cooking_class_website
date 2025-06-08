@@ -6,7 +6,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --configuration=hr",
-    "build": "ng build --configuration=production --delete-output-path=false --localize",
+    "build": "ng build --configuration=production --delete-output-path=false --localize && bash merge-locales.sh",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
