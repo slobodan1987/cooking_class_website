@@ -31,6 +31,8 @@ export class LanguageSwitcherComponent implements OnInit {
   ngOnInit(): void {
     const currentPath = this.location.path();
 
+    console.log(currentPath);
+
     if (!currentPath || currentPath === '' || currentPath === '/') {
       const saved = window.localStorage.getItem('selectedLanguage');
       if (saved) {
