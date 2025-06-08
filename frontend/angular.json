@@ -34,7 +34,7 @@
             "localize": true,
             "outputPath": "dist/cooking_class_website",
             "deployUrl": "/",
-            "baseHref": "/hr/",
+            "baseHref": "/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["src/polyfills.ts"],
@@ -56,7 +56,7 @@
           "configurations": {
             "hr": {
               "localize": ["hr"],
-              "baseHref": "/hr/"
+              "baseHref": "/"
             },
             "en-US": {
               "localize": ["en-US"],
@@ -119,9 +119,6 @@
             },
             "development": {
               "buildTarget": "cooking-class-website:build:development"
-            },
-            "hr": {
-              "buildTarget": "cooking-class-website:build:hr"
             },
             "de": {
               "buildTarget": "cooking-class-website:build:de"
