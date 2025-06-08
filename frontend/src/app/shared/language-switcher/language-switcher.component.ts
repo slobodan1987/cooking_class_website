@@ -163,10 +163,10 @@ export class LanguageSwitcherComponent implements OnInit {
     }
     window.localStorage.setItem('selectedLanguage', code);
     this.form.setValue(code);
+    window.location.href = newPath;
 
-    // Samo ako nismo već na toj stranici
-    if (this.location.path() !== newPath) {
-      window.location.href = newPath;
-    }
+    // // Samo ako nismo već na toj stranici
+    // if (this.location.path() !== newPath) {
+    // }
   }
 }
