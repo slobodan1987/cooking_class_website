@@ -34,7 +34,7 @@
             "localize": true,
             "outputPath": "dist/cooking_class_website",
             "deployUrl": "/",
-            "baseHref": "/hr/",
+            "baseHref": "/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["src/polyfills.ts"],
