@@ -17,7 +17,7 @@ interface LanguageForm {
   styleUrl: './language-switcher.component.scss',
 })
 export class LanguageSwitcherComponent implements OnInit {
-  constructor(private location: Location) {}
+  constructor() {}
   languages: Language[] = LANGUAGES;
   form: FormGroup<LanguageForm> = new FormGroup<LanguageForm>({
     language: new FormControl<
@@ -162,7 +162,7 @@ export class LanguageSwitcherComponent implements OnInit {
       newPath = '/index-en-US.html';
     }
     window.localStorage.setItem('selectedLanguage', code);
-    this.form.setValue(code);
+    this.form.setValue({ language: code });
     window.location.href = newPath;
 
     // // Samo ako nismo već na toj stranici
