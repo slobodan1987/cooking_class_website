@@ -17,7 +17,7 @@ echo "✅ HR prebacen u dist/cooking_class_website/merged"
 
 # Ostali jezici u podfoldere
 for lang in "${OTHER_LANGS[@]}"; do
-cp dist/cooking_class_website/browser/$lang/index.html dist/merged/${lang}.html
+cp dist/cooking_class_website/browser/$lang/index.html dist/cooking_class_website/merged/${lang}.html
 done
 echo "✅ svi jezici prebaceni u dist/cooking_class_website/merged"
 
