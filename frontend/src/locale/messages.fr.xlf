@@ -11,9 +11,9 @@
         </context-group>
       </trans-unit>
       <trans-unit id="description1" datatype="html">
-        <source> Dobrodošli u srce Like, gdje mirisi domaće kuhinje bude sjećanja, a okusi pričaju
-          priče naših baka. Naš Traditional Plitvice Lakes Cooking Class nije samo tečaj kuhanja –
-          to je doživljaj za dušu. </source>
+        <source>Welcome to the heart of Lika, where the aromas of home-cooked meals awaken memories,
+          and every flavor tells a story passed down through generations. Our Traditional Plitvice
+          Lakes Cooking Class is not just about learning to cook – it’s a soulful experience.</source>
         <target>Bienvenue au cœur de la Lika, où les arômes des plats faits maison éveillent les
           souvenirs et chaque saveur raconte une histoire transmise de génération en génération.
           Notre Traditional Plitvice Lakes Cooking Class n'est pas seulement un cours de cuisine –
@@ -24,10 +24,11 @@
         </context-group>
       </trans-unit>
       <trans-unit id="description2" datatype="html">
-        <source> U društvu naše obitelji, u toplini ličkog doma, naučit ćete pripremati autentična
-          plitvička i lička jela po starinskim receptima koji se prenose generacijama. Ali ne
-          brinite – ovdje se ne broje samo grami i minute. Ovdje se broje osmijesi, mirisi svježeg
-          bilja, zvuk pucanja vatre i topli razgovori uz rakijicu. </source>
+        <source>Join our family in the warmth of our countryside home as we guide you through the
+          preparation of authentic Plitvice and Lika dishes, using time-honored recipes and
+          techniques. But don’t worry – this isn’t a strict cooking lesson. It’s full of laughter,
+          the scent of fresh herbs, the crackle of firewood, and heartfelt conversation over a glass
+          of homemade rakija.</source>
         <target>Avec notre famille, dans l'atmosphère chaleureuse de notre maison traditionnelle,
           vous apprendrez à préparer des plats authentiques des lacs de Plitvice et de la Lika, en
           utilisant des recettes anciennes transmises au fil du temps. Mais ne vous inquiétez pas –
@@ -40,9 +41,9 @@
         </context-group>
       </trans-unit>
       <trans-unit id="description3" datatype="html">
-        <source> Zajedno ćemo mijesiti, sjeckati, kuhati i – najvažnije – smijati se. U svako jelo
-          unosimo dašak prošlih vremena i ljubavi prema kraju iz kojeg dolazimo. A dok kuhate s
-          nama, postajete dio te priče. </source>
+        <source>Together we’ll knead, chop, stir – and most importantly – enjoy. Every dish is
+          infused with a touch of the past and our love for this land. And as you cook with us, you
+          become a part of that story.</source>
         <target>Ensemble, nous pétrirons, couperons, remuerons – et surtout, nous nous amuserons.
           Chaque plat porte un peu du passé et de l'amour que nous avons pour cette terre. Et en
           cuisinant avec nous, vous devenez une partie de cette histoire.</target>
@@ -52,7 +53,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="expected" datatype="html">
-        <source>Što vas očekuje?</source>
+        <source>What to expect?</source>
         <target>À quoi s’attendre ?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
@@ -60,7 +61,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="bullet1" datatype="html">
-        <source>Edukacija i priprema tradicionalnih jela uz stručne i srdačne domaćine </source>
+        <source>Cooking class and preparation of traditional dishes with warm and knowledgeable
+          local hosts</source>
         <target>Atelier de cuisine et préparation de plats traditionnels avec des hôtes locaux
           chaleureux et expérimentés</target>
         <context-group purpose="location">
@@ -69,7 +71,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="bullet2" datatype="html">
-        <source>Korištenje lokalnih, svježih sastojaka – iz vrta, s tržnice ili iz prirode </source>
+        <source>Fresh, seasonal ingredients straight from the garden, the market, or the wild</source>
         <target>Des ingrédients frais et de saison directement du jardin, du marché ou de la nature</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
@@ -77,7 +79,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="bullet3" datatype="html">
-        <source>Nezaboravno druženje u rustikalnom ambijentu</source>
+        <source>A relaxed and rustic atmosphere</source>
         <target>Une ambiance détendue et rustique</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
@@ -86,7 +88,7 @@
         <note priority="1" from="description">bullet3</note>
       </trans-unit>
       <trans-unit id="bullet4" datatype="html">
-        <source>Kušanje vlastitih kulinarskih remek-djela uz domaće vino i rakiju</source>
+        <source>Enjoying the meal you've created with local wine and homemade brandy</source>
         <target>Déguster votre propre plat accompagné de vin local et de rakija maison</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
@@ -94,7 +96,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="bullet5" datatype="html">
-        <source>Trenuci koje ćete ponijeti kući – ne u torbi, nego u srcu</source>
+        <source>Moments you'll take home – not in your bag, but in your heart</source>
         <target>Des moments que vous emporterez avec vous – pas dans votre sac, mais dans votre cœur</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
@@ -102,10 +104,10 @@
         </context-group>
       </trans-unit>
       <trans-unit id="endingWord" datatype="html">
-        <source> Ovo nije samo kuhanje – ovo je spajanje s kulturom, s ljudima i s prirodom
-          Plitvičkih jezera. Ako tražite nešto istinski autentično, daleko od turističke vreve,
-          dođite da zajedno zapalimo vatru, razvaljamo tijesto i zapečemo uspomene koje će trajati
-          zauvijek. </source>
+        <source>This is more than cooking – it’s a connection to the culture, the people, and the
+          soul of the Plitvice Lakes region. If you're seeking something truly authentic, far from
+          the tourist crowds, come light the fire, roll the dough, and bake memories that will last
+          a lifetime.</source>
         <target>Ce n'est pas juste de la cuisine – c'est une connexion à la culture, aux gens et à
           l'âme des Lacs de Plitvice. Si vous cherchez quelque chose de vraiment authentique, loin
           des foules touristiques, venez allumer le feu, étirer la pâte et créer des souvenirs qui
@@ -116,7 +118,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="reserveWord" datatype="html">
-        <source> Rezervirajte svoje mjesto za stolom – obitelj vas čeka! </source>
+        <source>Book your seat at the table – our family is waiting for you!</source>
         <target>Réservez votre place à la table – notre famille vous attend !</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
@@ -124,7 +126,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="reservationsSoon" datatype="html">
-        <source>Rezerviranje putem stranice uskoro će biti omogućeno!</source>
+        <source>Booking through the website will be available soon!</source>
+
         <target>La réservation via le site sera bientôt disponible !</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
@@ -142,7 +145,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="timeLabel" datatype="html">
-        <source>Vrijeme održavanja:</source>
+        <source>Time of the event:</source>
         <target>Horaire de l’événement :</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/info-section/info-section.component.html</context>
@@ -150,7 +153,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="addressLabel" datatype="html">
-        <source>Adresa:</source>
+        <source>Address:</source>
         <target>Adresse :</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/info-section/info-section.component.html</context>
@@ -159,7 +162,7 @@
         <note priority="1" from="description">addressLabel</note>
       </trans-unit>
       <trans-unit id="phoneLabel" datatype="html">
-        <source>Telefon:</source>
+        <source>Phone:</source>
         <target>Téléphone :</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/info-section/info-section.component.html</context>
