@@ -10,6 +10,7 @@ mkdir -p dist/cooking_class_website/merged
 # Ostali jezici u podfoldere
 for lang in "${LANGS[@]}"; do
   sed -i "s/main\.js/main-${lang}.js/g" dist/cooking_class_website/browser/$lang/index.html
+  sed -i 's|"assets/img/lnh.png"|"/assets/img/lnh.png"|g' dist/cooking_class_website/browser/$lang/main.js
   mv dist/cooking_class_website/browser/$lang/index.html dist/cooking_class_website/browser/$lang/index-$lang.html
   mv dist/cooking_class_website/browser/$lang/main.js dist/cooking_class_website/browser/$lang/main-$lang.js
   cp -r dist/cooking_class_website/browser/$lang/* dist/cooking_class_website/merged/
