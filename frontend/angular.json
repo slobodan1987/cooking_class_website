@@ -54,13 +54,13 @@
             "scripts": []
           },
           "configurations": {
-            "en-US": {
-              "localize": ["en-US"],
-              "baseHref": "/en-US/"
-            },
             "hr": {
               "localize": ["hr"],
               "baseHref": "/hr/"
+            },
+            "en-US": {
+              "localize": ["en-US"],
+              "baseHref": "/en-US/"
             },
             "de": {
               "localize": ["de"],
