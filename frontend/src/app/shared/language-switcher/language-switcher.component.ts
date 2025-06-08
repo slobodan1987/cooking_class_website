@@ -4,6 +4,8 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { FlagPipe } from '../pipes/flag.pipe';
 import { Language, LANGUAGES } from './languages';
 
+const SUPPORTED_LANGUAGES = ['hr', 'en-US', 'de', 'it', 'fr', 'es', 'cs'];
+const DEFAULT_LANGUAGE = 'hr';
 interface LanguageForm {
   language: FormControl<
     'hr' | 'en-US' | 'de' | 'it' | 'fr' | 'es' | 'cs' | null
@@ -29,17 +31,31 @@ export class LanguageSwitcherComponent implements OnInit {
   });
 
   ngOnInit(): void {
-    const savedLanguage = window.localStorage.getItem('selectedLanguage');
-    const currentPath = this.location.path();
+    const currentPath = this.location.path() || '/';
 
-    if (savedLanguage && currentPath === `/index-${savedLanguage}.html`) {
-      this.form.controls['language'].setValue(savedLanguage as any);
-      return; // Ne preusmeravaj, već si tu
+    // 1. Ako postoji localStorage — koristi to
+    const saved = window.localStorage.getItem('selectedLanguage');
+    if (saved && this.isSupported(saved)) {
+      this.form.controls['language'].setValue(saved as any);
+      if (currentPath !== `/index-${saved}.html`) {
+        this.setLanguage(saved);
+      }
+      return;
     }
 
-    const code = savedLanguage || 'hr';
-    this.form.controls['language'].setValue(code as any);
-    this.setLanguage(code);
+    // 2. Ako nema localStorage — probaj izvući jezik iz URL-a
+    const match =
+      currentPath.match(/^\/([a-z-]+)$/) || // npr. /fr
+      currentPath.match(/index-([a-z-]+)\.html/); // npr. index-fr.html
+
+    const urlLang = match?.[1];
+
+    const detected = this.isSupported(urlLang) ? urlLang : DEFAULT_LANGUAGE;
+
+    this.form.controls['language'].setValue(detected as any);
+    if (currentPath !== `/index-${detected}.html`) {
+      this.setLanguage(detected);
+    }
   }
 
   switchLanguage(event: Event): void {
@@ -84,5 +100,8 @@ export class LanguageSwitcherComponent implements OnInit {
     if (window.location.pathname !== newPath) {
       window.location.href = newPath;
     }
+  }
+  isSupported(code: string | null | undefined): boolean {
+    return !!code && SUPPORTED_LANGUAGES.includes(code);
   }
 }
