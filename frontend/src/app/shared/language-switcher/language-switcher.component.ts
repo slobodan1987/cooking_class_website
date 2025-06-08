@@ -128,6 +128,18 @@ export class LanguageSwitcherComponent implements OnInit {
     //   codeDirectlyFromPathTrimmed = 'fr';
     // }
 
+    this.form.setValue({
+      language: saved as
+        | 'hr'
+        | 'en-US'
+        | 'de'
+        | 'it'
+        | 'fr'
+        | 'es'
+        | 'cs'
+        | null,
+    });
+
     this.setLanguage(saved);
   }
 
