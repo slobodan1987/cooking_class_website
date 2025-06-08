@@ -57,37 +57,72 @@
             "en-EN": {
               "localize": ["en-US"],
               "outputPath": "dist/cooking_class_website/en-US",
-              "baseHref": "/en-US/"
+              "baseHref": "/en-US/",
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractLicenses": true,
+              "namedChunks": false
             },
             "hr": {
               "localize": ["hr"],
               "outputPath": "dist/cooking_class_website/hr",
-              "baseHref": "/hr/"
+              "baseHref": "/hr/",
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractLicenses": true,
+              "namedChunks": false
             },
             "de": {
               "localize": ["de"],
               "outputPath": "dist/cooking_class_website/de",
-              "baseHref": "/de/"
+              "baseHref": "/de/",
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractLicenses": true,
+              "namedChunks": false
             },
             "cs": {
               "localize": ["cs"],
               "outputPath": "dist/cooking_class_website/cs",
-              "baseHref": "/cs/"
+              "baseHref": "/cs/",
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractLicenses": true,
+              "namedChunks": false
             },
             "es": {
               "localize": ["es"],
               "outputPath": "dist/cooking_class_website/es",
-              "baseHref": "/es/"
+              "baseHref": "/es/",
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractLicenses": true,
+              "namedChunks": false
             },
             "fr": {
               "localize": ["fr"],
               "outputPath": "dist/cooking_class_website/fr",
-              "baseHref": "/fr/"
+              "baseHref": "/fr/",
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractLicenses": true,
+              "namedChunks": false
             },
             "it": {
               "localize": ["it"],
               "outputPath": "dist/cooking_class_website/it",
-              "baseHref": "/it/"
+              "baseHref": "/it/",
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractLicenses": true,
+              "namedChunks": false
             },
             "production": {
               "budgets": [
