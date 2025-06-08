@@ -29,112 +29,106 @@ export class LanguageSwitcherComponent implements OnInit {
   });
 
   ngOnInit(): void {
-    const currentPath = this.location.path();
+    // const currentPath = this.location.path();
 
-    console.log(currentPath);
-
-    const codeDirectlyFromPath = currentPath.split('/')?.[1];
-
-    let codeDirectlyFromPathTrimmed = codeDirectlyFromPath?.trim();
     const saved = window.localStorage.getItem('selectedLanguage');
 
-    if (
-      !codeDirectlyFromPathTrimmed ||
-      codeDirectlyFromPathTrimmed === '' ||
-      codeDirectlyFromPathTrimmed === 'index.html' ||
-      codeDirectlyFromPathTrimmed === 'index-hr.html' ||
-      codeDirectlyFromPathTrimmed === 'index-Hr.html' ||
-      codeDirectlyFromPathTrimmed === 'index-HR.html' ||
-      codeDirectlyFromPathTrimmed === 'HR' ||
-      codeDirectlyFromPathTrimmed === 'Hr' ||
-      codeDirectlyFromPathTrimmed === 'hr'
-    ) {
-      // 2. Ako nema localStorage, koristi defaultni jezik
-      codeDirectlyFromPathTrimmed = 'hr';
-    }
+    // if (
+    //   !codeDirectlyFromPathTrimmed ||
+    //   codeDirectlyFromPathTrimmed === '' ||
+    //   codeDirectlyFromPathTrimmed === 'index.html' ||
+    //   codeDirectlyFromPathTrimmed === 'index-hr.html' ||
+    //   codeDirectlyFromPathTrimmed === 'index-Hr.html' ||
+    //   codeDirectlyFromPathTrimmed === 'index-HR.html' ||
+    //   codeDirectlyFromPathTrimmed === 'HR' ||
+    //   codeDirectlyFromPathTrimmed === 'Hr' ||
+    //   codeDirectlyFromPathTrimmed === 'hr'
+    // ) {
+    //   // 2. Ako nema localStorage, koristi defaultni jezik
+    //   codeDirectlyFromPathTrimmed = 'hr';
+    // }
 
-    if (
-      codeDirectlyFromPathTrimmed === 'index-de.html' ||
-      codeDirectlyFromPathTrimmed === 'index-De.html' ||
-      codeDirectlyFromPathTrimmed === 'index-DE.html' ||
-      codeDirectlyFromPathTrimmed === 'DE' ||
-      codeDirectlyFromPathTrimmed === 'De' ||
-      codeDirectlyFromPathTrimmed === 'de'
-    ) {
-      // 2. Ako nema localStorage, koristi defaultni jezik
-      codeDirectlyFromPathTrimmed = 'de';
-    }
+    // if (
+    //   codeDirectlyFromPathTrimmed === 'index-de.html' ||
+    //   codeDirectlyFromPathTrimmed === 'index-De.html' ||
+    //   codeDirectlyFromPathTrimmed === 'index-DE.html' ||
+    //   codeDirectlyFromPathTrimmed === 'DE' ||
+    //   codeDirectlyFromPathTrimmed === 'De' ||
+    //   codeDirectlyFromPathTrimmed === 'de'
+    // ) {
+    //   // 2. Ako nema localStorage, koristi defaultni jezik
+    //   codeDirectlyFromPathTrimmed = 'de';
+    // }
 
-    if (
-      codeDirectlyFromPathTrimmed === 'index-en.html' ||
-      codeDirectlyFromPathTrimmed === 'index-En.html' ||
-      codeDirectlyFromPathTrimmed === 'index-EN.html' ||
-      codeDirectlyFromPathTrimmed === 'EN' ||
-      codeDirectlyFromPathTrimmed === 'En' ||
-      codeDirectlyFromPathTrimmed === 'en' ||
-      codeDirectlyFromPathTrimmed === 'index-en-us.html' ||
-      codeDirectlyFromPathTrimmed === 'index-En-Us.html' ||
-      codeDirectlyFromPathTrimmed === 'index-EN-US.html' ||
-      codeDirectlyFromPathTrimmed === 'index-en-US.html' ||
-      codeDirectlyFromPathTrimmed === 'EN-US' ||
-      codeDirectlyFromPathTrimmed === 'En-Us' ||
-      codeDirectlyFromPathTrimmed === 'en-US' ||
-      codeDirectlyFromPathTrimmed === 'en-us'
-    ) {
-      // 2. Ako nema localStorage, koristi defaultni jezik
-      codeDirectlyFromPathTrimmed = 'en-US';
-    }
+    // if (
+    //   codeDirectlyFromPathTrimmed === 'index-en.html' ||
+    //   codeDirectlyFromPathTrimmed === 'index-En.html' ||
+    //   codeDirectlyFromPathTrimmed === 'index-EN.html' ||
+    //   codeDirectlyFromPathTrimmed === 'EN' ||
+    //   codeDirectlyFromPathTrimmed === 'En' ||
+    //   codeDirectlyFromPathTrimmed === 'en' ||
+    //   codeDirectlyFromPathTrimmed === 'index-en-us.html' ||
+    //   codeDirectlyFromPathTrimmed === 'index-En-Us.html' ||
+    //   codeDirectlyFromPathTrimmed === 'index-EN-US.html' ||
+    //   codeDirectlyFromPathTrimmed === 'index-en-US.html' ||
+    //   codeDirectlyFromPathTrimmed === 'EN-US' ||
+    //   codeDirectlyFromPathTrimmed === 'En-Us' ||
+    //   codeDirectlyFromPathTrimmed === 'en-US' ||
+    //   codeDirectlyFromPathTrimmed === 'en-us'
+    // ) {
+    //   // 2. Ako nema localStorage, koristi defaultni jezik
+    //   codeDirectlyFromPathTrimmed = 'en-US';
+    // }
 
-    if (
-      codeDirectlyFromPathTrimmed === 'index-cs.html' ||
-      codeDirectlyFromPathTrimmed === 'index-Cs.html' ||
-      codeDirectlyFromPathTrimmed === 'index-CS.html' ||
-      codeDirectlyFromPathTrimmed === 'CS' ||
-      codeDirectlyFromPathTrimmed === 'Cs' ||
-      codeDirectlyFromPathTrimmed === 'cs'
-    ) {
-      // 2. Ako nema localStorage, koristi defaultni jezik
-      codeDirectlyFromPathTrimmed = 'cs';
-    }
+    // if (
+    //   codeDirectlyFromPathTrimmed === 'index-cs.html' ||
+    //   codeDirectlyFromPathTrimmed === 'index-Cs.html' ||
+    //   codeDirectlyFromPathTrimmed === 'index-CS.html' ||
+    //   codeDirectlyFromPathTrimmed === 'CS' ||
+    //   codeDirectlyFromPathTrimmed === 'Cs' ||
+    //   codeDirectlyFromPathTrimmed === 'cs'
+    // ) {
+    //   // 2. Ako nema localStorage, koristi defaultni jezik
+    //   codeDirectlyFromPathTrimmed = 'cs';
+    // }
 
-    if (
-      codeDirectlyFromPathTrimmed === 'index-it.html' ||
-      codeDirectlyFromPathTrimmed === 'index-It.html' ||
-      codeDirectlyFromPathTrimmed === 'index-IT.html' ||
-      codeDirectlyFromPathTrimmed === 'IT' ||
-      codeDirectlyFromPathTrimmed === 'It' ||
-      codeDirectlyFromPathTrimmed === 'it'
-    ) {
-      // 2. Ako nema localStorage, koristi defaultni jezik
-      codeDirectlyFromPathTrimmed = 'it';
-    }
+    // if (
+    //   codeDirectlyFromPathTrimmed === 'index-it.html' ||
+    //   codeDirectlyFromPathTrimmed === 'index-It.html' ||
+    //   codeDirectlyFromPathTrimmed === 'index-IT.html' ||
+    //   codeDirectlyFromPathTrimmed === 'IT' ||
+    //   codeDirectlyFromPathTrimmed === 'It' ||
+    //   codeDirectlyFromPathTrimmed === 'it'
+    // ) {
+    //   // 2. Ako nema localStorage, koristi defaultni jezik
+    //   codeDirectlyFromPathTrimmed = 'it';
+    // }
 
-    if (
-      codeDirectlyFromPathTrimmed === 'index-es.html' ||
-      codeDirectlyFromPathTrimmed === 'index-Es.html' ||
-      codeDirectlyFromPathTrimmed === 'index-ES.html' ||
-      codeDirectlyFromPathTrimmed === 'ES' ||
-      codeDirectlyFromPathTrimmed === 'Es' ||
-      codeDirectlyFromPathTrimmed === 'es'
-    ) {
-      // 2. Ako nema localStorage, koristi defaultni jezik
-      codeDirectlyFromPathTrimmed = 'es';
-    }
+    // if (
+    //   codeDirectlyFromPathTrimmed === 'index-es.html' ||
+    //   codeDirectlyFromPathTrimmed === 'index-Es.html' ||
+    //   codeDirectlyFromPathTrimmed === 'index-ES.html' ||
+    //   codeDirectlyFromPathTrimmed === 'ES' ||
+    //   codeDirectlyFromPathTrimmed === 'Es' ||
+    //   codeDirectlyFromPathTrimmed === 'es'
+    // ) {
+    //   // 2. Ako nema localStorage, koristi defaultni jezik
+    //   codeDirectlyFromPathTrimmed = 'es';
+    // }
 
-    if (
-      codeDirectlyFromPathTrimmed === 'index-fr.html' ||
-      codeDirectlyFromPathTrimmed === 'index-Fr.html' ||
-      codeDirectlyFromPathTrimmed === 'index-FR.html' ||
-      codeDirectlyFromPathTrimmed === 'FR' ||
-      codeDirectlyFromPathTrimmed === 'Fr' ||
-      codeDirectlyFromPathTrimmed === 'fr'
-    ) {
-      // 2. Ako nema localStorage, koristi defaultni jezik
-      codeDirectlyFromPathTrimmed = 'fr';
-    }
+    // if (
+    //   codeDirectlyFromPathTrimmed === 'index-fr.html' ||
+    //   codeDirectlyFromPathTrimmed === 'index-Fr.html' ||
+    //   codeDirectlyFromPathTrimmed === 'index-FR.html' ||
+    //   codeDirectlyFromPathTrimmed === 'FR' ||
+    //   codeDirectlyFromPathTrimmed === 'Fr' ||
+    //   codeDirectlyFromPathTrimmed === 'fr'
+    // ) {
+    //   // 2. Ako nema localStorage, koristi defaultni jezik
+    //   codeDirectlyFromPathTrimmed = 'fr';
+    // }
 
-    codeDirectlyFromPathTrimmed = saved ?? 'hr';
-    this.setLanguage(codeDirectlyFromPathTrimmed);
+    this.setLanguage(saved);
   }
 
   switchLanguage(event: Event): void {
