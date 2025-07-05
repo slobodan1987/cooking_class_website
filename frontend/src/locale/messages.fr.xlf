@@ -160,6 +160,15 @@
           <context context-type="linenumber">149,150</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="reservationAndCancellation" datatype="html">
+        <source>Rezervaciju je moguće napraviti do 24 sata prije početka
+          događaja.</source>
+        <target>Il est possible de réserver jusqu’à 24 heures avant le début de l’événement.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">156,159</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="timeLabel" datatype="html">
         <source>Vrijeme održavanja:</source>
         <target>Horaire de l’événement :</target>
