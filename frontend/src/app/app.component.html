@@ -121,7 +121,17 @@
         </div>
       </div>
 
-      <div>
+      <div class="booking-and-reviews">
+        <div class="booking-form-container">
+          <!-- booking form -->
+          <app-booking-form [beState]="beState"></app-booking-form>
+        </div>
+        <div class="review-list-container">
+          <app-review-list></app-review-list>
+        </div>
+      </div>
+
+      <!-- <div>
         <p class="bullet-container">
           <i class="ph ph-clock icon"></i>
           <strong i18n="@@reservationsSoon"
@@ -157,7 +167,7 @@
             događaja.</strong
           >
         </p>
-      </div>
+      </div> -->
 
       <!-- info -->
       <app-info-section [beState]="beState"></app-info-section>

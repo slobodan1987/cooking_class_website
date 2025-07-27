@@ -11,6 +11,37 @@
     }
 }
 
+.booking-and-reviews {
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.booking-form-container {
+    flex: 50%;
+    padding-right: 16px;
+
+    @media (max-width: 768px) {
+        flex: 100%;
+        padding-right: 0;
+        padding-bottom: 16px;
+    }
+}
+
+.review-list-container {
+    flex: 50%;
+    padding-left: 16px;
+
+    @media (max-width: 768px) {
+        flex: 100%;
+        padding-left: 0;
+        padding-top: 16px;
+    }
+}
+
 .logo {
     width: 300px;
 
@@ -32,7 +63,7 @@
     inset: 0;
     background-position: center;
     opacity: 0.8;
-    background: url('/assets/img/plitvice-panorama.jpg');
+    background: url('/assets/img/plitvice-panorama.webp');
     background-blend-mode: overlay;
     background-size: cover;
     background-position: center;

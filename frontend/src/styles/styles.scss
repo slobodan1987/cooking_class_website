@@ -17,8 +17,7 @@ body {
   box-sizing: border-box;
 }
 
-.input-field,
-.submit-button {
+.input-field {
   box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.38);
 }
 
@@ -54,11 +53,17 @@ body {
   width: 100%;
   height: 32px;
   background-color: colors.$secondary-olive-green-700;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.38);
   border-radius: 4px;
 }
 
 .invalid-button {
+  width: 100%;
+  height: 32px;
   background-color: colors.$neutral-creamy-white-700;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.38);
+  border-radius: 4px;
+
   cursor: not-allowed;
 }
 

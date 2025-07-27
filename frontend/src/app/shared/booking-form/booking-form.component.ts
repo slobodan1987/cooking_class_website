@@ -101,27 +101,27 @@ export class BookingFormComponent implements AfterViewInit {
   createForm(): FormGroup<Form> {
     return new FormGroup<Form>({
       bookingForm: new FormGroup<BookingForm>({
-        name: new FormControl<string | null>({ value: null, disabled: true }, [
+        name: new FormControl<string | null>({ value: null, disabled: false }, [
           Validators.required,
         ]),
-        email: new FormControl<string | null>({ value: null, disabled: true }, [
-          Validators.required,
-          this.eMailValidator(),
-        ]),
-        phone: new FormControl<string | null>({ value: null, disabled: true }, [
-          Validators.required,
-          this.phoneValidator(),
-        ]),
+        email: new FormControl<string | null>(
+          { value: null, disabled: false },
+          [Validators.required, this.eMailValidator()]
+        ),
+        phone: new FormControl<string | null>(
+          { value: null, disabled: false },
+          [Validators.required, this.phoneValidator()]
+        ),
         date: new FormControl<string | null>(
           {
             value: null,
-            disabled: true,
+            disabled: false,
           },
           [Validators.required]
         ),
         // guests: new FormControl<number | null>({ value: 2, disabled: true }, [
         guests: new FormControl<number | null>(
-          { value: null, disabled: true },
+          { value: null, disabled: false },
           [
             Validators.min(this.minPersonsPerClass ?? 2),
             Validators.max(this.maxPersonsPerClass ?? 12),
@@ -131,7 +131,7 @@ export class BookingFormComponent implements AfterViewInit {
         message: new FormControl<string | null>(
           {
             value: null,
-            disabled: true,
+            disabled: false,
           },
           []
         ),
